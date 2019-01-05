@@ -61,14 +61,14 @@ header img{
 }
 header span{
 	display: flex;
-	align-items: center;
 	justify-content: center;
+	align-items: center;
 	width: 50px;
 	height: 50px;
 	font-weight: 900;
 }
 header:hover span:first-of-type{
-	color: #8C8C8C;
+	color: #8c8c8c;
 }
 header:hover span:hover,header span:first-of-type{
 	color: black;
