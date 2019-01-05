@@ -2,16 +2,14 @@
   <div class="hello">
  <header>
  	<img class="head" :src="src"></img>
- 	<router-link to="/follow" tag="span">关注</router-link>
-	<router-link to="/discover" tag='span'>发现</router-link>
-	<router-link to="/about" tag='span'>附近</router-link>
+ 	<!--<mt-search v-model="value"></mt-search>-->
  </header>
 		<section>
 			
-   		<router-view @toparent="getdata"></router-view>
+   		<!--<router-view @toparent="getdata"></router-view>-->
    	</section>
    	<footer>
-   		<router-link to="/follow" tag="span">首页</router-link>
+   		<router-link to="/" tag="span">首页</router-link>
    		<router-link to="/mall" tag='span'>商城</router-link>
    		<router-link to="/photograph" tag='span'>+</router-link>
    		<router-link to="/news" tag='span'>消息</router-link>
@@ -23,7 +21,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Mall',
   data () {
     return {
       src: ''
@@ -66,10 +64,7 @@ header span{
 	height: 50px;
 	font-weight: 900;
 }
-header:hover span:first-of-type{
-	color: #a1a1a1;
-}
-header:hover span:hover,header span:first-of-type{
+header span:hover,header span:first-of-type{
 	color: black;
 }
 section{
@@ -92,7 +87,7 @@ footer span{
 	height: 50px;
 	font-weight: 900;
 }
-footer span:hover{
+footer span:hover,footer span:nth-child(2){
 	color: black;
 }
 footer span:nth-child(3){
