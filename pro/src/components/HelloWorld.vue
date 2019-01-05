@@ -76,6 +76,7 @@ header:hover span:hover,header span:first-of-type{
 section{
 	flex: 1;
 	overflow: auto;
+	padding: 0 20px;
 }
 footer{
 	display: flex;

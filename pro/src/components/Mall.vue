@@ -19,6 +19,7 @@
 		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
 		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
 		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
+		  <mt-swipe-item style="background: green;">4</mt-swipe-item>
 		</mt-swipe>	
    	</section>
    	<footer>

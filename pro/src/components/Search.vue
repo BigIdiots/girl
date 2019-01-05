@@ -6,7 +6,7 @@
 		<router-link to="/discover" tag='span'>发现</router-link>
 		<router-link to="/about" tag='span'>附近</router-link>
 	</header>
-	<mt-search v-model="value" autofocus="true">
+	<mt-search v-model="value" autofocus="true" placeholder="大家都在搜“玩转春节”">
 		<!--<mt-cell
 		    v-for="item in result"
 		    :title="item.title"
