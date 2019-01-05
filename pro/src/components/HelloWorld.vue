@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
  <header>
- 	<img class="head" :src="src"></img>
+ 	<img class="head" :src="src">
  	<router-link to="/follow" tag="span">关注</router-link>
 	<router-link to="/discover" tag='span'>发现</router-link>
 	<router-link to="/about" tag='span'>附近</router-link>
@@ -45,8 +45,6 @@ header{
 	justify-content: center;
 	height: 50px;
 	background: #f1f1f1;
-	text-align: center;
-	line-height: 50px;
 	color: #a1a1a1;
 	font-size: 14px;
 }
@@ -61,13 +59,15 @@ header img{
 	background: #fff;
 }
 header span{
-	display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 50px;
 	height: 50px;
 	font-weight: 900;
 }
 header:hover span:first-of-type{
-	color: #a1a1a1;
+	color: #8c8c8c;
 }
 header:hover span:hover,header span:first-of-type{
 	color: black;
@@ -83,7 +83,7 @@ footer{
 	background: #f1f1f1;
 	text-align: center;
 	line-height: 50px;
-	color: #a1a1a1;
+	color: #8C8C8C;
 	font-size: 18px;
 }
 footer span{
