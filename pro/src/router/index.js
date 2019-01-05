@@ -6,6 +6,7 @@ import Mall from '@/components/Mall'
 import Follow from '@/components/Follow'
 import About from '@/components/About'
 import Discover from '@/components/Discover'
+import Search from '@/components/Search'
 
 
 Vue.use(Router)
@@ -35,6 +36,10 @@ export default new Router({
     {
     	path: '/mall',
       component: Mall
+    },
+    {
+    	path: '/search',
+      component: Search
     }
   ]
 })

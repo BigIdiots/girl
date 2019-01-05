@@ -1,12 +1,25 @@
 <template>
   <div class="hello">
  <header>
- 	<img class="head" :src="src"></img>
- 	<!--<mt-search v-model="value"></mt-search>-->
+ 	<img :src="src">
+	<div class="mint-searchbar">
+		<router-link to="/search" class="mint-searchbar-inner">
+			<i class="mintui mintui-search"></i>
+			<input type="search" placeholder="大家都在搜“玩转春节”" class="mint-searchbar-core">
+		</router-link>
+	</div>
  </header>
-		<section>
-			
-   		<!--<router-view @toparent="getdata"></router-view>-->
+ <nav>
+ 	<router-link to="/recommend" tag="span">推荐</router-link>
+	<router-link to="/skin" tag='span'>护肤</router-link>
+	<router-link to="/cosmetics" tag='span'>彩妆</router-link>
+ </nav>
+	<section>
+		<mt-swipe :auto="3000" style="height:200px">
+		  <mt-swipe-item style="background: red;">1</mt-swipe-item>
+		  <mt-swipe-item style="background: yellow;">2</mt-swipe-item>
+		  <mt-swipe-item style="background: pink;">3</mt-swipe-item>
+		</mt-swipe>	
    	</section>
    	<footer>
    		<router-link to="/" tag="span">首页</router-link>
@@ -33,9 +46,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .hello{
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
+height: 100vh;
+display: flex;
+flex-direction: column;
 }
 header{
 	position: relative;
@@ -43,8 +56,6 @@ header{
 	justify-content: center;
 	height: 50px;
 	background: #f1f1f1;
-	text-align: center;
-	line-height: 50px;
 	color: #a1a1a1;
 	font-size: 14px;
 }
@@ -58,14 +69,28 @@ header img{
 	border-radius: 50%;
 	background: #fff;
 }
-header span{
-	display: block;
-	width: 50px;
-	height: 50px;
-	font-weight: 900;
+header .mint-searchbar{
+	width: 305px;
+    margin-left: 60px;
+    height: 100%;
+	background-color: transparent;
 }
-header span:hover,header span:first-of-type{
-	color: black;
+header .mint-searchbar input{
+	margin-left: 5px;
+}
+nav{
+	height: 36px;
+	display: flex;
+	justify-content: space-around;
+	font-size: 16px;
+	line-height: 36px;
+	background: #fdfdfd;
+	color: #8c8c8c;
+}
+nav span{
+	display: block;
+	width: 35px;
+	font-weight: 900;
 }
 section{
 	flex: 1;
@@ -78,7 +103,7 @@ footer{
 	background: #f1f1f1;
 	text-align: center;
 	line-height: 50px;
-	color: #a1a1a1;
+	color: #8C8C8C;
 	font-size: 18px;
 }
 footer span{
@@ -87,7 +112,7 @@ footer span{
 	height: 50px;
 	font-weight: 900;
 }
-footer span:hover,footer span:nth-child(2){
+footer span:hover{
 	color: black;
 }
 footer span:nth-child(3){

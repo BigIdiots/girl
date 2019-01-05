@@ -1,10 +1,11 @@
 <template>
 	<div id="">
-		<mt-search
-		  v-model="value"
-		  cancel-text="取消"
-		  placeholder="搜索">
-		</mt-search>
+		<div class="mint-searchbar">
+			<router-link to="/search" class="mint-searchbar-inner">
+				<i class="mintui mintui-search"></i>
+				<input type="search" placeholder="大家都在搜“玩转春节”" class="mint-searchbar-core">
+			</router-link>
+		</div>
 
 	</div>
 </template>
