@@ -1,9 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
+
+import Mall from '@/components/Mall'
 import Follow from '@/components/Follow'
-import Discover from '@/components/Discover'
 import About from '@/components/About'
+import Discover from '@/components/Discover'
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -11,21 +15,26 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
+      redirect:'/follow',
       component: HelloWorld,
       children:[
-      		{
-      			path:'/follow',
-      			component:Follow
-      		},
-      		{
-      			path:'/discover',
-      			component:Discover
-      		},
-      		{
-      			path:'/about',
-      			component:About
-      		}
+		     {
+		    		path:'/follow',
+		    		component:Follow
+		    },
+		    {
+		    		path:'/about',
+		    		component:About
+		    },
+		    {
+		    		path:'/discover',
+		    		component:Discover
+		    }
       ]
+    },
+    {
+    	path: '/mall',
+      component: Mall
     }
   ]
 })
