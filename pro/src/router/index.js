@@ -31,6 +31,7 @@ export default new Router({
 		    },
 		    {
 		    		path:'/discover',
+		    		redirect:'/commit',
 		    		component:Discover,
 		    		children:[//发现菜单的子菜单
 		    			{

@@ -7,16 +7,16 @@
 			</router-link>
 		</div>
 
-		<figure>
-			<router-link to='#'><img src="" /></router-link>
+		<article>
+			<router-link to='*'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="info">
 				<img src="*"/>
-				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #8e8e8e;line-height: 30px;text-align: center;margin-left: 154px;">收藏</router-link>
-				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #8e8e8e;line-height: 30px;text-align: center;margin: 0 10px;">评论</router-link>
-				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #8e8e8e;line-height: 30px;text-align: center;">点赞</router-link>
+				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #F1F1F1;line-height: 30px;text-align: center;margin-left: 154px;">收藏</router-link>
+				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #F1F1F1;line-height: 30px;text-align: center;margin: 0 10px;">评论</router-link>
+				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #F1F1F1;line-height: 30px;text-align: center;">点赞</router-link>
 			</div>
-		</figure>
+		</article>
 	</div>
 </template>
 
@@ -36,17 +36,22 @@
 	
 
 <style>
-	
-	figure{
+	div.mint-searchbar{
+		background: #FFFFFF;
+	}
+	div.mint-searchbar input,a.mint-searchbar-inner{
+		background: #F1F1F1;
+	}
+	article{
 		border-bottom: 1px solid #E8E8E8;
 	}
-	figure img{
-		width: 357px;
+	article img{
+		width: 100%;
 		height: 230px;
-		margin: 20px 10px;
+		margin: 30px 0 20px 0;
 		background-size:100% ;
 	}
-	figure p{
+	article p{
 		margin-left: 28px;
 	}
 	.info{
