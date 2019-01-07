@@ -1,12 +1,5 @@
 <template>
 	<div id="">
-		<div class="mint-searchbar" style="background: #fff;padding: 8px 40px;">
-			<router-link to="/search" class="mint-searchbar-inner" style="background: #F1F1F1;">
-				<i class="mintui mintui-search"></i>
-				<input type="search" placeholder="大家都在搜“玩转春节”" class="mint-searchbar-core" style="background: #F1F1F1;">
-			</router-link>
-		</div>
-
 		<article>
 			<router-link to='*'><img src="#" /></router-link>
 			<p>数据模仿</p>

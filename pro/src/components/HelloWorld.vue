@@ -7,8 +7,14 @@
 	<router-link to="/about" tag='span'>附近</router-link>
  </header>
 
-		<section>
+			<div class="mint-searchbar" style="background: #fff;padding: 8px 40px;">
+				<router-link to="/search" class="mint-searchbar-inner" style="background: #F1F1F1;">
+				<i class="mintui mintui-search"></i>
+				<input type="search" placeholder="大家都在搜“玩转春节”" class="mint-searchbar-core" style="background: #F1F1F1;">
+				</router-link>
+			</div>
 			
+		<section>
    		<router-view @toparent="getdata"></router-view>
    	</section>
    	<footer>
