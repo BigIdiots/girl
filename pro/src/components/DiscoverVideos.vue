@@ -1,20 +1,20 @@
 <template>
-	<div class="benti">
+	<div class="benti" style="flex-direction: column;align-items: center;">
 		<address style="font-style: normal;">
-			<router-link to='#'><img src="#" /></router-link>
+			<router-link to='/#'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="lietus">
 				<img src="*"/>
-				<p>pink</p>
+				<span>pink</span>
 				<router-link to='#' tag="h5">点赞</router-link>
 			</div>
 		</address>
 		<address style="font-style: normal;">
-			<router-link to='#'><img src="#" /></router-link>
+			<router-link to='/#'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="lietus">
 				<img src="*"/>
-				<p>pink</p>
+				<span>pink</span>
 				<router-link to='#' tag="h5">点赞</router-link>
 			</div>
 		</address>

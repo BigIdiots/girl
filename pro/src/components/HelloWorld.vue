@@ -14,7 +14,7 @@
    	<footer>
    		<router-link to="/" tag="span">首页</router-link>
    		<router-link to="/mall" tag='span'>商城</router-link>
-   		<router-link to="/photograph" tag='span'>+</router-link>
+   		<router-link to="/login" tag='span'>+</router-link>
    		<router-link to="/news" tag='span'>消息</router-link>
    		<router-link to='/myself' tag="span">我</router-link>
    	</footer>

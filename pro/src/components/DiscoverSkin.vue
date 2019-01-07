@@ -1,19 +1,19 @@
 <template>
 	<div class="benti">
 		<figure>
-			<router-link to='#'><img src="#" /></router-link>
+			<router-link to='/#'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="lietu">
 				<img src="*"/>
-				<p>pink</p>
+				<span>pink</span>
 			</div>
 		</figure>
 		<figure>
-			<router-link to='#'><img src="#" /></router-link>
+			<router-link to='/#'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="lietu">
 				<img src="*"/>
-				<p>pink</p>
+				<span>pink</span>
 			</div>
 		</figure>
 	</div>

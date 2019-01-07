@@ -13,6 +13,8 @@ import DiscoverCommit from '@/components/DiscoverCommit'
 import DiscoverSkin from '@/components/DiscoverSkin'
 import DiscoverVideos from '@/components/DiscoverVideos'
 import DiscoverMakeup from '@/components/DiscoverMakeup'
+import Login from '@/components/Login'
+
 Vue.use(Router)
 
 export default new Router({
@@ -24,15 +26,15 @@ export default new Router({
       component: HelloWorld,
       children:[
 		     {
-		    		path:'/follow',
+		    		path:'/follow',//关注
 		    		component:Follow
 		    },
 		    {
-		    		path:'/about',
+		    		path:'/about',//附近
 		    		component:About
 		    },
 		    {
-		    		path:'/discover',
+		    		path:'/discover',//发现
 		    		redirect:'/discoverCommit',
 		    		component:Discover,
 		    		children:[//发现菜单的子菜单
@@ -57,7 +59,7 @@ export default new Router({
       ]
     },
     {
-    	path: '/mall',
+    	path: '/mall',//商城部分
       component: Mall,
       redirect:'/MallRecommend',
       children:[
@@ -76,8 +78,12 @@ export default new Router({
       ]
     },
     {
-    	path: '/search',
+    	path: '/search',//搜索界面
       component: Search
+    },
+    {
+    	path:'/login',//验证码登录
+    	component:Login,
     }
   ]
 })
