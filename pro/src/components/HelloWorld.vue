@@ -73,6 +73,9 @@ header:hover span:first-of-type{
 header:hover span:hover,header span:first-of-type{
 	color: black;
 }
+.mint-searchbar input{
+	margin-left: 5px;
+}
 section{
 	flex: 1;
 	overflow: auto;
