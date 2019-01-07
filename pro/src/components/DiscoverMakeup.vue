@@ -1,7 +1,7 @@
 <template>
 	<div class="benti">
 		<figure>
-			<router-link to='/follow'><img src="#" /></router-link>
+			<router-link to='#'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="lietu">
 				<img src="*"/>

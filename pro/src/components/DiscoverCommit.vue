@@ -1,7 +1,7 @@
 <template>
 	<div class="benti">
 		<figure>
-			<router-link to='/follow'><img src="#" /></router-link>
+			<router-link to='#'><img src="#" /></router-link>
 			<p>数据模仿</p>
 			<div class="lietu">
 				<img src="*"/>
@@ -41,10 +41,10 @@
 	figure{
 		width: 156px;
 		/*float: left;*/
-		margin: 15px;
+		margin: 15px 6px;
 	}
 	figure img{
-		width: 168px;
+		width: 100%;
 		height: 214px;
 		background-size:100%;
 	}
