@@ -33,10 +33,15 @@
 </script>
 
 <style>
+	.benti{
+		display: flex;
+		justify-content: center;
+		
+	}
 	figure{
 		width: 156px;
-		float: left;
-		margin: 13px 0 13px 30px;
+		/*float: left;*/
+		margin: 15px;
 	}
 	figure img{
 		width: 168px;
