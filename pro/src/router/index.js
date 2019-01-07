@@ -8,6 +8,8 @@ import Search from '@/components/Search'
 import Discover from '@/components/Discover'
 import Login from '@/components/Login'
 import Concern from '@/components/Concern' 
+import Draft from '@/components/Draft'
+import Collect from '@/components/Collect'
 Vue.use(Router)
 
 export default new Router({
@@ -45,8 +47,17 @@ export default new Router({
     	component:Login
     },
     {
-    	path:'/concern',
+    	path:'/concern',//我的关注
     	component:Concern
+    },
+    {
+    	path:'/draft',//我的草稿
+    	component:Draft
+    },
+    {
+    	path:'/collect',//我的收藏
+    	component:Collect,
+    	
     }
   ]
 })
