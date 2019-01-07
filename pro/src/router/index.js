@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-
 import Mall from '@/components/Mall'
 import Follow from '@/components/Follow'
 import About from '@/components/About'
@@ -11,6 +10,9 @@ import Commit from '@/components/Commit'
 import Skin from '@/components/Skin'
 import Videos from '@/components/Videos'
 import Makeup from '@/components/Makeup'
+import MallSkin from '@/components/MallSkin'
+import MallCosmetics from '@/components/MallCosmetics'
+import MallRecommend from '@/components/MallRecommend'
 Vue.use(Router)
 
 export default new Router({
@@ -56,7 +58,22 @@ export default new Router({
     },
     {
     	path: '/mall',
-      component: Mall
+      component: Mall,
+      redirect:'/MallRecommend',
+      children:[
+      	{
+					path:'/MallRecommend',
+					component:MallRecommend
+				},
+				{
+					path:'/MallSkin',
+					component:MallSkin
+				},
+				{
+					path:'/MallCosmetics',
+					component:MallCosmetics
+				}
+      ]
     },
     {
     	path: '/search',
