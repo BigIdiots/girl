@@ -38,7 +38,7 @@
 <style>
 	div.mint-searchbar{
 		background: #FFFFFF;
-		padding: 0 40px;
+		padding: 8px 40px;
 	}
 	div.mint-searchbar input,a.mint-searchbar-inner{
 		background: #F1F1F1;

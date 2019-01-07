@@ -36,10 +36,4 @@
 		justify-content: space-around;
 		align-items: center;
 	}
-	nav:hover span:first-of-type{
-	color: #8c8c8c;
-	}
-	nav:hover span:hover,nav span:first-of-type{
-	color: black;
-	}
 </style>
