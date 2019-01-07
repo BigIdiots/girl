@@ -22,8 +22,9 @@
 
 	<section>
 		<!--<router-view @toparent="getdata"></router-view>-->
-		<mt-tab-container v-model="active" swipeable="true">
-  <mt-tab-container-item id="MallRecommend">
+	<mt-tab-container v-model="active" swipeable="true">
+		
+  <mt-tab-container-item id="MallRecommend"><!--推荐-->
   	<aside>
 			<mt-swipe :auto="3000" style="height:200px">
 			  <mt-swipe-item style="background: red;">1</mt-swipe-item>
@@ -118,7 +119,8 @@
     </ul>
 		</aside>
   </mt-tab-container-item>
-  <mt-tab-container-item id="MallSkin">
+  
+  <mt-tab-container-item id="MallSkin"><!--护肤-->
     <!--<mt-cell v-for="n in 14" :title="'测试 ' + n" />-->
     <aside class="aside">
     <ul class="list">
@@ -161,7 +163,8 @@
     </ul>
     </aside>
   </mt-tab-container-item>
-  <mt-tab-container-item id="MallCosmetics">
+  
+  <mt-tab-container-item id="MallCosmetics"><!--彩妆-->
     <!--<mt-cell v-for="n in 16" :title="'选项 ' + n" />-->
     <aside class="aside">
     <ul class="list">
