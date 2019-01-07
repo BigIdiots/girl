@@ -8,6 +8,7 @@ import Search from '@/components/Search'
 import Discover from '@/components/Discover'
 import Login from '@/components/Login'
 import Concern from '@/components/Concern' 
+import MallActivity from '@/components/MallActivity' 
 Vue.use(Router)
 
 export default new Router({
@@ -47,6 +48,10 @@ export default new Router({
     {
     	path:'/concern',
     	component:Concern
+    },
+    {
+    	path:'/MallActivity',
+    	component:MallActivity
     }
   ]
 })

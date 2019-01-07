@@ -65,7 +65,7 @@ header img{
 	border-radius: 50%;
 	background: #fff;
 }
-header span{
+header>span{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -73,10 +73,10 @@ header span{
 	height: 50px;
 	font-weight: 900;
 }
-header:hover span:first-of-type{
+header:hover>span:first-of-type{
 	color: #8c8c8c;
 }
-header:hover span:hover,header span:first-of-type{
+header:hover>span:hover,header>span:first-of-type{
 	color: black;
 }
 .mint-searchbar input{
