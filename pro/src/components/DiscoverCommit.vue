@@ -18,31 +18,33 @@
 				<router-link to='#' tag="h5">点赞</router-link>
 			</div>
 		</figure>
-		
 	</div>
 </template>
 
 <script>
 		export default {
-  name: 'Commit',
-  data () {
-    return {
-      src: ''
-    }
-  }
-}
+		  name: 'DiscoverCommit',
+		  data () {
+		    return {
+		      src: ''
+		    }
+		  }
+		}
 </script>
 
 <style>
 	figure{
 		width: 156px;
 		float: left;
-		margin: 13px ;
+		margin: 13px 0 13px 30px;
 	}
 	figure img{
 		width: 168px;
 		height: 214px;
 		background-size:100%;
+	}
+	figure p{
+		margin:12px 0 ;
 	}
 	.lietu{
 		height: 34px;
@@ -60,6 +62,6 @@
 		font-size:14px ;
 	}
 	.lietu h5{
-		margin-left: 20px;
+		margin-left: 55px;
 	}
 </style>

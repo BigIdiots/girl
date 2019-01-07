@@ -38,14 +38,16 @@
 <style>
 	div.mint-searchbar{
 		background: #FFFFFF;
+		padding: 0 40px;
 	}
 	div.mint-searchbar input,a.mint-searchbar-inner{
 		background: #F1F1F1;
 	}
 	article{
 		border-bottom: 1px solid #E8E8E8;
+		padding: 0 10px;
 	}
-	article img{
+	article a img{
 		width: 100%;
 		height: 230px;
 		margin: 30px 0 20px 0;

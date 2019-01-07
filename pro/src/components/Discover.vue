@@ -8,10 +8,10 @@
 		</div>
 	<nav id="">
 		
-		<router-link to="/commit" tag="span">推荐</router-link>
-		<router-link to="/makeup" tag='span'>彩妆</router-link>
-		<router-link to="/skin" tag='span'>护肤</router-link>
-		<router-link to="/videos" tag='span'>视频</router-link>
+		<router-link to="/discoverCommit" tag="span">推荐</router-link>
+		<router-link to="/discoverMakeup" tag='span'>彩妆</router-link>
+		<router-link to="/discoverSkin" tag='span'>护肤</router-link>
+		<router-link to="/discoverVideos" tag='span'>视频</router-link>
 	</nav>
 		<router-view @toparent="getdata"></router-view>
 	</div>
