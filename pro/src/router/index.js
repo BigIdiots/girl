@@ -7,7 +7,7 @@ import About from '@/components/About'
 import Search from '@/components/Search'
 import Discover from '@/components/Discover'
 import Login from '@/components/Login'
-
+import Concern from '@/components/Concern' 
 Vue.use(Router)
 
 export default new Router({
@@ -43,6 +43,10 @@ export default new Router({
     {
     	path:'/login',//验证码登录
     	component:Login
+    },
+    {
+    	path:'/concern',
+    	component:Concern
     }
   ]
 })
