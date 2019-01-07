@@ -1,9 +1,9 @@
 <template>
 	<div id="">
-		<div class="mint-searchbar">
-			<router-link to="/search" class="mint-searchbar-inner">
+		<div class="mint-searchbar" style="background: #fff;padding: 8px 40px;">
+			<router-link to="/search" class="mint-searchbar-inner" style="background: #F1F1F1;">
 				<i class="mintui mintui-search"></i>
-				<input type="search" placeholder="大家都在搜“玩转春节”" class="mint-searchbar-core">
+				<input type="search" placeholder="大家都在搜“玩转春节”" class="mint-searchbar-core" style="background: #F1F1F1;">
 			</router-link>
 		</div>
 
@@ -36,13 +36,6 @@
 	
 
 <style>
-	div.mint-searchbar{
-		background: #FFFFFF;
-		padding: 8px 40px;
-	}
-	div.mint-searchbar input,a.mint-searchbar-inner{
-		background: #F1F1F1;
-	}
 	article{
 		border-bottom: 1px solid #E8E8E8;
 		padding: 0 10px;
