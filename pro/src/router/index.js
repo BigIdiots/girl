@@ -1,18 +1,19 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import Mall from '@/components/Mall'
-import Follow from '@/components/Follow'
-import About from '@/components/About'
-import Search from '@/components/Search'
-import Discover from '@/components/Discover'
-import Login from '@/components/Login'
-import Concern from '@/components/Concern' 
-import MallActivity from '@/components/MallActivity' 
-import Draft from '@/components/Draft'
-import Collect from '@/components/Collect'
-import CollectAll from '@/components/CollectAll'
-import CollectAlbum from '@/components/CollectAlbum'
+import HelloWorld from '@/components/HelloWorld'//主页
+import Mall from '@/components/Mall'//商城
+import Follow from '@/components/Follow'//关注（首页）
+import About from '@/components/About'//附近
+import Search from '@/components/Search'//搜索
+import Discover from '@/components/Discover'//发现
+import Login from '@/components/Login'//登录
+import Concern from '@/components/Concern' //我的关注
+import MallActivity from '@/components/MallActivity'//商城-活动 
+import MallSeckill from '@/components/MallSeckill' //商城-限时购
+import Draft from '@/components/Draft'//我的草稿
+import Collect from '@/components/Collect'//我的收藏
+import CollectAll from '@/components/CollectAll'//我的收藏-所有收藏
+import CollectAlbum from '@/components/CollectAlbum'//我的收藏-我的专辑
 Vue.use(Router)
 
 export default new Router({
@@ -54,8 +55,12 @@ export default new Router({
     	component:Concern
     },
     {
-    	path:'/MallActivity',
+    	path:'/MallActivity',//商城-活动
     	component:MallActivity
+    },
+    {
+    	path:'/MallSeckill',//商城-限时购
+    	component:MallSeckill
     },
     {
     	path:'/draft',//我的草稿
@@ -67,11 +72,11 @@ export default new Router({
     	component:Collect,
     	children:[
     		{
-    			path:'/collectAll',
+    			path:'/collectAll',//所有收藏
     			component:CollectAll
     		},
     		{
-    			path:'/collectAlbum',
+    			path:'/collectAlbum',//我的专辑
     			component:CollectAlbum
     		}
     	]
