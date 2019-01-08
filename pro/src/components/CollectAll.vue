@@ -1,11 +1,9 @@
 <template>
-	<!--我的收藏-->
-	
 </template>
 
 <script>
-		export default {
-  name: 'Collect',
+			export default {
+  name: 'CollectAll',
   data () {
     return {
       src: ''

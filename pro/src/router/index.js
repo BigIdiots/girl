@@ -11,6 +11,8 @@ import Concern from '@/components/Concern'
 import MallActivity from '@/components/MallActivity' 
 import Draft from '@/components/Draft'
 import Collect from '@/components/Collect'
+import CollectAll from '@/components/CollectAll'
+import CollectAlbum from '@/components/CollectAlbum'
 Vue.use(Router)
 
 export default new Router({
@@ -61,7 +63,18 @@ export default new Router({
     },
     {
     	path:'/collect',//我的收藏
+    	redirect:'/collectAll',
     	component:Collect,
+    	children:[
+    		{
+    			path:'/collectAll',
+    			component:CollectAll
+    		},
+    		{
+    			path:'/collectAlbum',
+    			component:CollectAlbum
+    		}
+    	]
     }
   ]
 })
