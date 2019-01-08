@@ -2,8 +2,8 @@
 <div class="hello">
 	<!--<header>-->
 <mt-header title="活动">
-  <router-link to="/" slot="left">
-    <mt-button icon="back"></mt-button>
+  <router-link to="/mall" slot="left">
+     <mt-button icon="back"></mt-button>
   </router-link>
   <mt-button icon="more" slot="right"></mt-button>
 </mt-header>
