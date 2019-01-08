@@ -11,9 +11,9 @@
 		</header>
 
 		<mt-navbar v-model="active">
-			<mt-tab-item id="MallRecommend">推荐</mt-tab-item>
-			<mt-tab-item id="MallSkin">护肤</mt-tab-item>
-			<mt-tab-item id="MallCosmetics">彩妆</mt-tab-item>
+			<mt-tab-item id="MallRecommend" style="padding: 10px 0;">推荐</mt-tab-item>
+			<mt-tab-item id="MallSkin" style="padding: 10px 0;">护肤</mt-tab-item>
+			<mt-tab-item id="MallCosmetics" style="padding: 10px 0;">彩妆</mt-tab-item>
 		</mt-navbar>
 
 		<section>
@@ -166,7 +166,7 @@ aside .activity{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	background: #aaa;
+	background: red;
 	font-size: 12px;
 	color: #101010;
 }

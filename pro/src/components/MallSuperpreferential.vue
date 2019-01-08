@@ -1,0 +1,147 @@
+<template>
+	<div class="hello">
+		<mt-header title="超值特惠">
+		  <router-link to="/mall" slot="left">
+		     <mt-button icon="back"></mt-button>
+		  </router-link>
+		  <mt-button icon="more" slot="right"></mt-button>
+		</mt-header>
+
+		
+		<section>
+			<img src="../assets/logo.png" width="100%" height="145px" />
+			<aside style="margin-bottom: 6px;">
+			<router-link to="/MallActivity" class="activity">
+				<div>
+					<img src="" width="80" height="80" />
+					<div>
+						<p>春节来了</p>
+						<p style="font-size: 16px;">抢春节特惠</p>
+					</div>
+				</div>
+				<span>GO</span>
+			</router-link>
+			</aside>
+			<mt-navbar v-model="active" style="background: #AAAAAA;">
+				<mt-tab-item id="optional" style="padding: 10px 0;">任选囤货</mt-tab-item>
+				<mt-tab-item id="advance" style="padding: 10px 0;">春节提前购</mt-tab-item>
+				<mt-tab-item id="skin" style="padding: 10px 0;">护肤</mt-tab-item>
+				<mt-tab-item id="cosmetics" style="padding: 10px 0;">彩妆</mt-tab-item>
+			</mt-navbar>
+			<mt-tab-container v-model="active" swipeable="true">
+				<mt-tab-container-item id="optional">
+					<aside class="aside">
+						<ul class="mallList">
+							<li>
+								<img src="" width="150" height="150">
+								<p>滋润丰盈肌肤神器</p>
+								<p>兰蔻精华修复肌底液</p>
+								<p>￥200</p>
+							</li>
+						</ul>
+					</aside>
+				</mt-tab-container-item>
+
+				<mt-tab-container-item id="advance">
+					<aside class="aside">
+						<ul class="mallList">
+							<li>
+								<img src="" width="150" height="150">
+								<p>滋润丰盈肌肤神器</p>
+								<p>兰蔻精华修复肌底液</p>
+								<p>￥200</p>
+							</li>
+						</ul>
+					</aside>
+				</mt-tab-container-item>
+
+				<mt-tab-container-item id="skin">
+					<aside class="aside">
+						<ul class="mallList">
+							<li>
+								<img src="" width="150" height="150">
+								<p>滋润丰盈肌肤神器</p>
+								<p>兰蔻精华修复肌底液</p>
+								<p>￥200</p>
+							</li>
+						</ul>
+					</aside>
+				</mt-tab-container-item>
+				
+				<mt-tab-container-item id="cosmetics">
+					<aside class="aside">
+						<ul class="mallList">
+							<li>
+								<img src="" width="150" height="150">
+								<p>滋润丰盈肌肤神器</p>
+								<p>兰蔻精华修复肌底液</p>
+								<p>￥200</p>
+							</li>
+						</ul>
+					</aside>
+				</mt-tab-container-item>
+			</mt-tab-container>
+		</section>
+	</div>
+</template>
+
+<script>
+export default {
+  name: 'MallSuperpreferential',
+  data () {
+    return {
+      src: '',
+      active:'optional'
+    }
+  }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style>
+/*.nav{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 14px;
+}
+.nav span{
+	display: block;
+}
+div.countdown{
+	display: flex;
+	justify-content: space-between;
+	padding: 2px 20px;
+	box-shadow: 0 1px 5px;
+	font-size: 12px;
+}
+section .MallSuperpreferential{
+	background: #F8F8F8;
+	height: 120px;
+	border-bottom: 1px solid #AAAAAA;
+}
+section .MallSuperpreferential:last-of-type{
+	border-bottom: none;
+}
+section .MallSuperpreferentialImg{
+	display: flex;
+}
+section .MallSuperpreferentialList{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 12px;
+	height: 110px;
+	margin-left: 20px;
+	padding: 5px 0;
+}
+section .MallSuperpreferentialList>div p:first-of-type{
+	color: #101010;
+	font-weight: 700;
+}
+section .MallSuperpreferentialList>div p:nth-child(2){
+	margin-top: 10px;
+	color: #8C8C8C;
+}
+*/
+</style>
