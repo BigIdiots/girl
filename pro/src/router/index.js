@@ -15,11 +15,17 @@ import Collect from '@/components/Collect'//我的收藏
 import CollectAll from '@/components/CollectAll'//我的收藏-所有收藏
 import CollectAlbum from '@/components/CollectAlbum'//我的收藏-我的专辑
 import Service from '@/components/Service'//客服中心
+import News from '@/components/News'//消息
+import NewsPraise from '@/components/NewsPraise'//消息-收到的赞和收藏
+import NewsDiscuss from '@/components/NewsDiscuss'//消息-收到的评论
+import NewsAdd from '@/components/NewsAdd'//消息-新增关注
+import NewsInform from '@/components/NewsInform'//消息-通知消息
+import NewsPrivate from '@/components/NewsPrivate'//消息-私信
 Vue.use(Router)
 
 export default new Router({
   routes: [
-    {
+    	{
       path: '/',
       name: 'HelloWorld',
       redirect:'/follow',
@@ -85,6 +91,30 @@ export default new Router({
     {
     	path:'/service',//客服中心
     	component:Service
-    }
+    },
+    {
+    	path:'/news',//消息
+    	component:News
+    },
+			{
+				path:'/newsPraise',//消息-收到的赞
+				component:NewsPraise
+			},
+			{
+				path:'/newsDiscuss',//消息-收到的评论
+				component:NewsDiscuss
+			},
+			{
+				path:'/newsAdd',//消息-新增关注
+				component:NewsAdd
+			},
+			{
+				path:'/newsInform',//消息-通知消息
+				component:NewsInform
+			},
+			{
+				path:'/newsPrivate',//消息-私信
+				component:NewsPrivate
+			}
   ]
 })
