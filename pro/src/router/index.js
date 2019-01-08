@@ -1,17 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'//主页
-import Mall from '@/components/Mall'//商城
 import Follow from '@/components/Follow'//关注（首页）
 import About from '@/components/About'//附近
 import Search from '@/components/Search'//搜索
 import Discover from '@/components/Discover'//发现
 import Login from '@/components/Login'//登录
-import Concern from '@/components/Concern' //我的关注
+import Mall from '@/components/Mall'//商城
 import MallActivity from '@/components/MallActivity'//商城-活动 
 import MallSeckill from '@/components/MallSeckill' //商城-限时购
 import MallPreferential from '@/components/MallPreferential' //商城-特惠
 import MallSuperPreferential from '@/components/MallSuperPreferential' //商城-超值特惠
+import Concern from '@/components/Concern' //我的关注
 import Draft from '@/components/Draft'//我的草稿
 import Collect from '@/components/Collect'//我的收藏
 import CollectAll from '@/components/CollectAll'//我的收藏-所有收藏

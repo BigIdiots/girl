@@ -23,12 +23,12 @@
 			</router-link>
 			</aside>
 			<mt-navbar v-model="active" style="background: #AAAAAA;">
-				<mt-tab-item id="MallPreferential1" style="padding: 10px 0;">人气销量王</mt-tab-item>
-				<mt-tab-item id="MallPreferential2" style="padding: 10px 0;">新品上线</mt-tab-item>
-				<mt-tab-item id="MallPreferential3" style="padding: 10px 0;">超值囤货</mt-tab-item>
+				<mt-tab-item id="popularity" style="padding: 10px 0;">人气销量王</mt-tab-item>
+				<mt-tab-item id="products" style="padding: 10px 0;">新品上线</mt-tab-item>
+				<mt-tab-item id="store" style="padding: 10px 0;">超值囤货</mt-tab-item>
 			</mt-navbar>
 			<mt-tab-container v-model="active" swipeable="true">
-				<mt-tab-container-item id="MallPreferential1">
+				<mt-tab-container-item id="popularity">
 					<mt-cell class="MallPreferential">
 						<div class="MallPreferentialImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120">
@@ -45,7 +45,7 @@
 					</mt-cell>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="MallPreferential2">
+				<mt-tab-container-item id="products">
 					<mt-cell class="MallPreferential">
 						<div class="MallPreferentialImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120">
@@ -62,7 +62,7 @@
 					</mt-cell>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="MallPreferential3">
+				<mt-tab-container-item id="store">
 					<mt-cell class="MallPreferential">
 						<div class="MallPreferentialImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120">
@@ -89,7 +89,7 @@ export default {
   data () {
     return {
       src: '',
-      active:'MallPreferential1'
+      active:'popularity'
     }
   }
 }
