@@ -11,6 +11,7 @@ import MallActivity from '@/components/MallActivity'//商城-活动
 import MallSeckill from '@/components/MallSeckill' //商城-限时购
 import MallPreferential from '@/components/MallPreferential' //商城-特惠
 import MallSuperPreferential from '@/components/MallSuperPreferential' //商城-超值特惠
+import MallPopular from '@/components/MallPopular' //商城-人气产品
 import Concern from '@/components/Concern' //我的关注
 import Draft from '@/components/Draft'//我的草稿
 import Collect from '@/components/Collect'//我的收藏
@@ -78,6 +79,10 @@ export default new Router({
     {
     	path:'/MallSuperPreferential',//商城-超值特惠
     	component:MallSuperPreferential
+    },
+    {
+    	path:'/MallPopular',//商城-人气产品
+    	component:MallPopular
     },
     {
     	path:'/draft',//我的草稿

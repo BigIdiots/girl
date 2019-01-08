@@ -31,15 +31,15 @@
 				<mt-tab-container-item id="limit">
 					<mt-cell class="MallSeckill">
 						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
 							<div class="MallSeckillList">
 								<div>
-									<p>淡夜茉莉版大宝</p>
-							  		<p>好评大宝 100ml 管装x2</p>
+									<p>当家花旦烈焰蓝金</p>
+							  		<p>Shiseido Maquillage 资生堂心彩妆 心机  雪花蜜粉饼 2018新版单芯</p>
 								</div>
 							  	<div>
 							  		<p>￥55</p>
-							  		<mt-badge size="small" color="#888">自定义颜色</mt-badge>
+							  		<mt-button type="primary">加入购物车</mt-button>
 							  	</div>
 							</div>
 						</div>
@@ -57,7 +57,7 @@
 								</div>
 							  	<div>
 							  		<p>￥55</p>
-							  		<mt-badge size="small" color="#888">自定义颜色</mt-badge>
+							  		<mt-badge size="small" color="#888">加入购物车</mt-badge>
 							  	</div>
 							</div>
 						</div>
@@ -75,7 +75,7 @@
 								</div>
 							  	<div>
 							  		<p>￥55</p>
-							  		<mt-badge size="small" color="#888">自定义颜色</mt-badge>
+							  		<mt-badge type="primary">加入购物车</mt-badge>
 							  	</div>
 							</div>
 						</div>
@@ -108,14 +108,14 @@ section .MallSeckill{
 section .MallSeckill:last-of-type{
 	border-bottom: none;
 }
-section .MallSeckill button{
+/*section .MallSeckill button{
 	height: 25px;
 	font-size: 12px;
 	width: 65px;
 	margin-left: 30px;
 	align-self: flex-end;
 	margin-top: 65px;
-}
+}*/
 section .MallSeckillImg{
 	display: flex;
 }
@@ -128,12 +128,25 @@ section .MallSeckillList{
 	margin-left: 20px;
 	padding: 5px 0;
 }
+section .MallSeckillList>div:last-child{
+	display: flex;
+	align-items: flex-end;
+}
+section .MallSeckillList>div:last-child button{
+	margin-left: 80px;
+	width: 90px;
+	height: 26px;
+	border-radius: 15px;
+	font-size: 12px;
+}
 section .MallSeckillList>div p:first-of-type{
 	color: #101010;
 	font-weight: 700;
+	font-size: 14px;
 }
 section .MallSeckillList>div p:nth-child(2){
-	margin-top: 10px;
+	margin-top: 6px;
 	color: #8C8C8C;
+	line-height: 1.2;
 }
 </style>
