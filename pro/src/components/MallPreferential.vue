@@ -1,6 +1,6 @@
 <template>
 	<div class="hello">
-		<mt-header title="限时购">
+		<mt-header title="特惠">
 		  <router-link to="/mall" slot="left">
 		     <mt-button icon="back"></mt-button>
 		  </router-link>
@@ -185,7 +185,7 @@
 
 <script>
 export default {
-  name: 'MallSeckill',
+  name: 'MallPreferential',
   data () {
     return {
       src: '',
