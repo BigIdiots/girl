@@ -13,8 +13,8 @@
 			<article>
 				<img src="" />
 				<div>
-					<h2><span>樱桃小丸子</span></h2>
-					<time>下午14:54</time>
+					<h2><span>很可爱</span></h2>
+					<time>2017-10-01 14:54:22</time>
 				</div>
 			</article>
 		</section>

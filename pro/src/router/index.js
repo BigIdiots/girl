@@ -14,6 +14,7 @@ import Draft from '@/components/Draft'//我的草稿
 import Collect from '@/components/Collect'//我的收藏
 import CollectAll from '@/components/CollectAll'//我的收藏-所有收藏
 import CollectAlbum from '@/components/CollectAlbum'//我的收藏-我的专辑
+import Service from '@/components/Service'//客服中心
 Vue.use(Router)
 
 export default new Router({
@@ -80,6 +81,10 @@ export default new Router({
     			component:CollectAlbum
     		}
     	]
+    },
+    {
+    	path:'/service',//客服中心
+    	component:Service
     }
   ]
 })
