@@ -45,14 +45,18 @@
 					<mt-cell class="MallSeckill">
 						<div class="MallSeckillImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
 						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
+							<div>
+								<p>淡夜茉莉版大宝</p>
+						  		<p>好评大宝 100ml 管装x2</p>
+							</div>
+						  	<div>
+						  		<p>￥55</p>
+							  	<mt-progress :value="45" :bar-height="10">
+								  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
+								</mt-progress>
+						  	</div>
+						</div>
 						</div>
 						<mt-button plain>马上抢</mt-button>
 					</mt-cell>
@@ -78,8 +82,7 @@
 				<mt-tab-container-item id="MallSeckill3">
 					<mt-cell class="MallSeckill">
 						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
+							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
 						<div class="MallSeckillList">
 						  	<p>淡夜茉莉版大宝</p>
 						  	<p>好评大宝 100ml 管装x2</p>
@@ -87,6 +90,7 @@
 						  	<mt-progress :value="45" :bar-height="10">
 							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
 							</mt-progress>
+						</div>
 						</div>
 						<mt-button plain>马上抢</mt-button>
 					</mt-cell>
@@ -197,18 +201,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-/*.mint-navbar .mint-tab-item{
-	font-size: 14px;
-}
-.mint-navbar .mint-tab-item.is-selected {
-    border-bottom: 2px solid #26a2ff;
-    color: #26a2ff;
-    margin-bottom: 0;
-}
-.mint-tab-item-label{
-	font-size: 14px;
-	font-weight: 700;
-}*/
 .nav{
 	display: flex;
 	flex-direction: column;
@@ -234,12 +226,15 @@ section .MallSeckill:last-of-type{
 	border-bottom: none;
 }
 section .MallSeckill button{
-	height: 20px;
+	height: 25px;
 	font-size: 12px;
-	width: 70px;
+	width: 65px;
 	margin-left: 30px;
 	align-self: flex-end;
-	margin-bottom: 15px;
+	margin-top: 65px;
+}
+section .MallSeckillImg{
+	display: flex;
 }
 section .MallSeckillList{
 	display: flex;
@@ -247,10 +242,15 @@ section .MallSeckillList{
 	justify-content: space-around;
 	font-size: 12px;
 	height: 110px;
+	margin-left: 20px;
 	padding: 5px 0;
 }
-section .MallSeckillList p:first-of-type,section .MallSeckillList p:last-of-type{
+section .MallSeckillList>div p:first-of-type{
 	color: #101010;
 	font-weight: 700;
+}
+section .MallSeckillList>div p:nth-child(2){
+	margin-top: 10px;
+	color: #8C8C8C;
 }
 </style>

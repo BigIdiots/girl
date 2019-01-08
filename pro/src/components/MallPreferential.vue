@@ -7,175 +7,75 @@
 		  <mt-button icon="more" slot="right"></mt-button>
 		</mt-header>
 
-		<mt-navbar v-model="active" style="background: #AAAAAA;">
-			<mt-tab-item id="MallSeckill1" style="padding: 5px 0;">
-				<div class="nav">
-					<span>20:00</span>
-					<span>爆款直降</span>
-				</div>
-			</mt-tab-item>
-			<mt-tab-item id="MallSeckill2" style="padding: 5px 0;">
-				<div class="nav">
-					<span>20:00</span>
-					<span>爆款直降</span>
-				</div>
-			</mt-tab-item>
-			<mt-tab-item id="MallSeckill3" style="padding: 5px 0;">
-				<div class="nav">
-					<span>20:00</span>
-					<span>爆款直降</span>
-				</div>
-			</mt-tab-item>
-			<mt-tab-item id="MallSeckill4" style="padding: 5px 0;">
-				<div class="nav">
-					<span>20:00</span>
-					<span>爆款直降</span>
-				</div>
-			</mt-tab-item>
-		</mt-navbar>
 		
-		<div class="countdown">
-			<p>春节同价提前购</p>
-			<p>距离结束还有　<span>3</span>　小时</p>
-		</div>
-		
-		<section style="margin-top: 2px;">
+		<section>
+			<img src="../assets/logo.png" width="100%" height="145px" />
+			<aside style="margin-bottom: 6px;">
+			<router-link to="/MallActivity" class="activity">
+				<div>
+					<img src="" width="80" height="80" />
+					<div>
+						<p>春节来了</p>
+						<p style="font-size: 16px;">抢春节特惠</p>
+					</div>
+				</div>
+				<span>GO</span>
+			</router-link>
+			</aside>
+			<mt-navbar v-model="active" style="background: #AAAAAA;">
+				<mt-tab-item id="MallPreferential1" style="padding: 10px 0;">人气销量王</mt-tab-item>
+				<mt-tab-item id="MallPreferential2" style="padding: 10px 0;">新品上线</mt-tab-item>
+				<mt-tab-item id="MallPreferential3" style="padding: 10px 0;">超值囤货</mt-tab-item>
+			</mt-navbar>
 			<mt-tab-container v-model="active" swipeable="true">
-				<mt-tab-container-item id="MallSeckill1">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
+				<mt-tab-container-item id="MallPreferential1">
+					<mt-cell class="MallPreferential">
+						<div class="MallPreferentialImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120">
+						<div class="MallPreferentialList">
+							<div>
+								<p>舒缓补水亮肤好物</p>
+						  		<p>巴啦啦美白面膜 滋润保湿</p>
+							</div>
+						  	<div>
+						  		<p>￥118</p>
+						  	</div>
 						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
 						</div>
-						<mt-button plain>马上抢</mt-button>
 					</mt-cell>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="MallSeckill2">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
+				<mt-tab-container-item id="MallPreferential2">
+					<mt-cell class="MallPreferential">
+						<div class="MallPreferentialImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120">
+						<div class="MallPreferentialList">
+							<div>
+								<p>舒缓补水亮肤好物</p>
+						  		<p>巴啦啦美白面膜 滋润保湿</p>
+							</div>
+						  	<div>
+						  		<p>￥118</p>
+						  	</div>
 						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
 						</div>
-						<mt-button plain>马上抢</mt-button>
 					</mt-cell>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="MallSeckill3">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
+				<mt-tab-container-item id="MallPreferential3">
+					<mt-cell class="MallPreferential">
+						<div class="MallPreferentialImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120">
+						<div class="MallPreferentialList">
+							<div>
+								<p>舒缓补水亮肤好物</p>
+						  		<p>巴啦啦美白面膜 滋润保湿</p>
+							</div>
+						  	<div>
+						  		<p>￥118</p>
+						  	</div>
 						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
 						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-				</mt-tab-container-item>
-				
-				<mt-tab-container-item id="MallSeckill4">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
 					</mt-cell>
 				</mt-tab-container-item>
 			</mt-tab-container>
@@ -189,7 +89,7 @@ export default {
   data () {
     return {
       src: '',
-      active:'MallSeckill1'
+      active:'MallPreferential1'
     }
   }
 }
@@ -197,18 +97,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-/*.mint-navbar .mint-tab-item{
-	font-size: 14px;
-}
-.mint-navbar .mint-tab-item.is-selected {
-    border-bottom: 2px solid #26a2ff;
-    color: #26a2ff;
-    margin-bottom: 0;
-}
-.mint-tab-item-label{
-	font-size: 14px;
-	font-weight: 700;
-}*/
 .nav{
 	display: flex;
 	flex-direction: column;
@@ -225,32 +113,33 @@ div.countdown{
 	box-shadow: 0 1px 5px;
 	font-size: 12px;
 }
-section .MallSeckill{
+section .MallPreferential{
 	background: #F8F8F8;
 	height: 120px;
 	border-bottom: 1px solid #AAAAAA;
 }
-section .MallSeckill:last-of-type{
+section .MallPreferential:last-of-type{
 	border-bottom: none;
 }
-section .MallSeckill button{
-	height: 20px;
-	font-size: 12px;
-	width: 70px;
-	margin-left: 30px;
-	align-self: flex-end;
-	margin-bottom: 15px;
+section .MallPreferentialImg{
+	display: flex;
 }
-section .MallSeckillList{
+section .MallPreferentialList{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	font-size: 12px;
 	height: 110px;
+	margin-left: 20px;
 	padding: 5px 0;
 }
-section .MallSeckillList p:first-of-type,section .MallSeckillList p:last-of-type{
+section .MallPreferentialList>div p:first-of-type{
 	color: #101010;
 	font-weight: 700;
 }
+section .MallPreferentialList>div p:nth-child(2){
+	margin-top: 10px;
+	color: #8C8C8C;
+}
+
 </style>
