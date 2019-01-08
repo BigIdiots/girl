@@ -11,18 +11,29 @@
 		</mt-header>
 		
 		<section>
-			<div class="topss">
+			<router-link to="#" tag="div"  class="topss">
 				<mt-cell >
-					<router-link to="#" class="yonghu" slot="title" style="height: 105px;line-height: 24px;">
+					<div class="yonghu" slot="title" style="height: 72px;line-height: 24px;" >
 					 	<img slot="icon" src="../../build/logo.png" width="40" height="40" style="display: inline-block;border-radius: 50%;margin-top: 15px;">
 						<div class="">
-							<p>是三三啊  评论了你的笔记</p>
-							<p>刚刚</p>
-							<p>嘿嘿嘿</p>
+							<p>陌生人消息</p>
+							<p>是思思啊:<span>在吗？</span></p>
 						</div>							 	
-					</router-link>
+					</div>
 				</mt-cell>
-			</div>
+			</router-link>
+			
+			<router-link to="#" tag="div"  class="topss">
+				<mt-cell >
+					<div class="yonghu" slot="title" style="height: 72px;line-height: 24px;" >
+					 	<img slot="icon" src="../../build/logo.png" width="40" height="40" style="display: inline-block;border-radius: 50%;margin-top: 15px;">
+						<div class="">
+							<p>陌生人消息</p>
+							<p>是思思啊:<span>在吗？</span></p>
+						</div>							 	
+					</div>
+				</mt-cell>
+			</router-link>
 		</section>
 	</div>
 </template>
@@ -40,6 +51,6 @@
 
 <style>
 	.topss{
-		
+		margin-top: 10px;
 	}
 </style>
