@@ -66,14 +66,18 @@
 					<mt-cell class="MallSeckill">
 						<div class="MallSeckillImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
 						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
+							<div>
+								<p>淡夜茉莉版大宝</p>
+						  		<p>好评大宝 100ml 管装x2</p>
+							</div>
+						  	<div>
+						  		<p>￥55</p>
+							  	<mt-progress :value="45" :bar-height="10">
+								  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
+								</mt-progress>
+						  	</div>
+						</div>
 						</div>
 						<mt-button plain>马上抢</mt-button>
 					</mt-cell>
@@ -82,14 +86,18 @@
 				<mt-tab-container-item id="MallSeckill3">
 					<mt-cell class="MallSeckill">
 						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
+							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
 						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
+							<div>
+								<p>淡夜茉莉版大宝</p>
+						  		<p>好评大宝 100ml 管装x2</p>
+							</div>
+						  	<div>
+						  		<p>￥55</p>
+							  	<mt-progress :value="45" :bar-height="10">
+								  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
+								</mt-progress>
+						  	</div>
 						</div>
 						</div>
 						<mt-button plain>马上抢</mt-button>
@@ -100,84 +108,18 @@
 					<mt-cell class="MallSeckill">
 						<div class="MallSeckillImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
 						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
+							<div>
+								<p>淡夜茉莉版大宝</p>
+						  		<p>好评大宝 100ml 管装x2</p>
+							</div>
+						  	<div>
+						  		<p>￥55</p>
+							  	<mt-progress :value="45" :bar-height="10">
+								  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
+								</mt-progress>
+						  	</div>
 						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
-						</div>
-						<mt-button plain>马上抢</mt-button>
-					</mt-cell>
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-						</div>
-						<div class="MallSeckillList">
-						  	<p>淡夜茉莉版大宝</p>
-						  	<p>好评大宝 100ml 管装x2</p>
-						  	<p>￥55</p>
-						  	<mt-progress :value="45" :bar-height="10">
-							  	<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-							</mt-progress>
 						</div>
 						<mt-button plain>马上抢</mt-button>
 					</mt-cell>

@@ -22,11 +22,13 @@
 				<span>GO</span>
 			</router-link>
 			</aside>
+			
 			<mt-navbar v-model="active" style="background: #AAAAAA;">
 				<mt-tab-item id="popularity" style="padding: 10px 0;">人气销量王</mt-tab-item>
 				<mt-tab-item id="products" style="padding: 10px 0;">新品上线</mt-tab-item>
 				<mt-tab-item id="store" style="padding: 10px 0;">超值囤货</mt-tab-item>
 			</mt-navbar>
+			
 			<mt-tab-container v-model="active" swipeable="true">
 				<mt-tab-container-item id="popularity">
 					<mt-cell class="MallPreferential">
@@ -97,22 +99,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.nav{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 14px;
-}
-.nav span{
-	display: block;
-}
-div.countdown{
-	display: flex;
-	justify-content: space-between;
-	padding: 2px 20px;
-	box-shadow: 0 1px 5px;
-	font-size: 12px;
-}
 section .MallPreferential{
 	background: #F8F8F8;
 	height: 120px;
