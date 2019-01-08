@@ -1,13 +1,11 @@
 <template>
 	<!--我的关注-->
 	<div class="cons">
-		<header>
 			<mt-header title="我的关注" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="#" slot="left">
 			    <mt-button @click="handleClose" style="width: 30px;height: 30px;background: #E8E8E8;">返回</mt-button>
 			  </router-link>
 			</mt-header>
-		</header>
 		
 		<mt-navbar v-model="active" style="background: #F8F8F8;">
 			<mt-tab-item id="1">用户</mt-tab-item>
