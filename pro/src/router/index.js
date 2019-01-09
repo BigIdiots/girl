@@ -23,6 +23,7 @@ import NewsDiscuss from '@/components/NewsDiscuss'//消息-收到的评论
 import NewsAdd from '@/components/NewsAdd'//消息-新增关注
 import NewsInform from '@/components/NewsInform'//消息-通知消息
 import NewsPrivate from '@/components/NewsPrivate'//消息-私信
+import Details from '@/components/Details'//商品详情
 Vue.use(Router)
 
 export default new Router({
@@ -125,6 +126,10 @@ export default new Router({
 			{
 				path:'/newsPrivate',//消息-私信
 				component:NewsPrivate
+			},
+			{
+				path:'/details',
+				component:Details
 			}
   ]
 })
