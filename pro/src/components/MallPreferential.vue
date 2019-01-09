@@ -31,16 +31,17 @@
 			
 			<mt-tab-container v-model="active" swipeable="true">
 				<mt-tab-container-item id="popularity">
-					<mt-cell class="MallPreferential">
-						<div class="MallPreferentialImg" slot="title">
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120">
-						<div class="MallPreferentialList">
+						<div class="MallList">
 							<div>
 								<p>舒缓补水亮肤好物</p>
 						  		<p>巴啦啦美白面膜 滋润保湿</p>
 							</div>
 						  	<div>
 						  		<p>￥118</p>
+						  		<mt-button type="primary">加入购物车</mt-button>
 						  	</div>
 						</div>
 						</div>
@@ -48,16 +49,17 @@
 				</mt-tab-container-item>
 
 				<mt-tab-container-item id="products">
-					<mt-cell class="MallPreferential">
-						<div class="MallPreferentialImg" slot="title">
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120">
-						<div class="MallPreferentialList">
+						<div class="MallList">
 							<div>
 								<p>舒缓补水亮肤好物</p>
 						  		<p>巴啦啦美白面膜 滋润保湿</p>
 							</div>
 						  	<div>
 						  		<p>￥118</p>
+						  		<mt-button type="primary">加入购物车</mt-button>
 						  	</div>
 						</div>
 						</div>
@@ -65,16 +67,17 @@
 				</mt-tab-container-item>
 
 				<mt-tab-container-item id="store">
-					<mt-cell class="MallPreferential">
-						<div class="MallPreferentialImg" slot="title">
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120">
-						<div class="MallPreferentialList">
+						<div class="MallList">
 							<div>
 								<p>舒缓补水亮肤好物</p>
 						  		<p>巴啦啦美白面膜 滋润保湿</p>
 							</div>
 						  	<div>
 						  		<p>￥118</p>
+						  		<mt-button type="primary">加入购物车</mt-button>
 						  	</div>
 						</div>
 						</div>
@@ -99,33 +102,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-section .MallPreferential{
-	background: #F8F8F8;
-	height: 120px;
-	border-bottom: 1px solid #AAAAAA;
-}
-section .MallPreferential:last-of-type{
-	border-bottom: none;
-}
-section .MallPreferentialImg{
-	display: flex;
-}
-section .MallPreferentialList{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	font-size: 12px;
-	height: 110px;
-	margin-left: 20px;
-	padding: 5px 0;
-}
-section .MallPreferentialList>div p:first-of-type{
-	color: #101010;
-	font-weight: 700;
-}
-section .MallPreferentialList>div p:nth-child(2){
-	margin-top: 10px;
-	color: #8C8C8C;
-}
-
 </style>

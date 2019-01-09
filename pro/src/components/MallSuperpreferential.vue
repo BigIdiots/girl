@@ -99,49 +99,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-/*.nav{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	font-size: 14px;
-}
-.nav span{
-	display: block;
-}
-div.countdown{
-	display: flex;
-	justify-content: space-between;
-	padding: 2px 20px;
-	box-shadow: 0 1px 5px;
-	font-size: 12px;
-}
-section .MallSuperpreferential{
-	background: #F8F8F8;
-	height: 120px;
-	border-bottom: 1px solid #AAAAAA;
-}
-section .MallSuperpreferential:last-of-type{
-	border-bottom: none;
-}
-section .MallSuperpreferentialImg{
-	display: flex;
-}
-section .MallSuperpreferentialList{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	font-size: 12px;
-	height: 110px;
-	margin-left: 20px;
-	padding: 5px 0;
-}
-section .MallSuperpreferentialList>div p:first-of-type{
-	color: #101010;
-	font-weight: 700;
-}
-section .MallSuperpreferentialList>div p:nth-child(2){
-	margin-top: 10px;
-	color: #8C8C8C;
-}
-*/
 </style>
