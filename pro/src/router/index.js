@@ -25,7 +25,7 @@ import NewsAdd from '@/components/NewsAdd'//消息-新增关注
 import NewsInform from '@/components/NewsInform'//消息-通知消息
 import NewsPrivate from '@/components/NewsPrivate'//消息-私信
 import Details from '@/components/Details'//商品详情
-import Official from '@/components/Official'
+import Official from '@/components/Official'//客服对话
 Vue.use(Router)
 
 export default new Router({
