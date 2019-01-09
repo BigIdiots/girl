@@ -133,7 +133,7 @@ export default new Router({
 				component:NewsPrivate
 			},
 			{
-				path:'/details',
+				path:'/details',//商品详情
 				component:Details
 			}
   ]
