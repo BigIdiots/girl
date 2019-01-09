@@ -2,7 +2,7 @@
 	<div class="hello">
 		<mt-header title="限时购">
 		  <router-link to="/mall" slot="left">
-		     <mt-button icon="back"></mt-button>
+		     <mt-button icon="back" @click="back()">返回</mt-button>
 		  </router-link>
 		  <mt-button icon="more" slot="right"></mt-button>
 		</mt-header>
@@ -40,7 +40,7 @@
 		</div>
 		
 		<section style="margin-top: 2px;">
-			<mt-tab-container v-model="active" swipeable="true">
+			<mt-tab-container v-model="active" :swipeable="true">
 				<mt-tab-container-item id="Mall1">
 					<mt-cell class="Mall">
 						<div class="MallImg" slot="title">
@@ -145,6 +145,11 @@ export default {
       src: '',
       active:'Mall1'
     }
+  },
+  methods:{
+  	back(){
+  		this.$router.go(-1);
+  	}
   }
 }
 </script>

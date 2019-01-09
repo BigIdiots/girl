@@ -17,10 +17,10 @@
 		</mt-navbar>
 
 		<section>
-			<mt-tab-container v-model="active" swipeable="true">
+			<mt-tab-container v-model="active" :swipeable=true>
 				<mt-tab-container-item id="MallRecommend">
 					<aside>
-						<mt-swipe :auto="3000" style="height:200px" stopPropagation="true" prevent="true">
+						<mt-swipe :auto="3000" style="height:200px" :stopPropagation="true" :prevent="true">
 							<mt-swipe-item style="background: red;">1</mt-swipe-item>
 							<mt-swipe-item style="background: yellow;">2</mt-swipe-item>
 							<mt-swipe-item style="background: pink;">3</mt-swipe-item>
@@ -156,9 +156,6 @@ header .mint-searchbar{
 aside{
 	padding: 0 15px;
 }
-/*aside.aside{
-	padding: 0 12px;
-}*/
 aside .activity{
 	width: 100%;
 	height: 100px;
@@ -229,6 +226,7 @@ ul.mallList{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	font-size: 14px;
+	margin-top: 40px;
 }
 ul.mallList li{
 	padding: 10px;
@@ -243,7 +241,21 @@ ul.mallList li p:nth-of-type(2){
 	color: #8C8C8C;
 	margin-bottom: 10px;
 }
-
+section{
+	position: relative;
+}
+section .MallNav{
+	position: absolute;
+	left: 0;
+	top: 250px;
+	width: 100%;
+	background: #AAAAAA;
+	z-index: 99;
+}
+section .MallNav.isFixed{
+	position: fixed;
+	top: 40px;
+}
 section .Mall{
 	background: #F8F8F8;
 	border-bottom: 1px solid #AAAAAA;
@@ -252,10 +264,6 @@ section .Mall>div{
 	background-image: none;
 	padding: 10px;
 }
-/*section .Mall>button{
-	height: 30px;
-	margin-left: 20px;
-}*/
 section .Mall:last-of-type{
 	border-bottom: none;
 }
@@ -274,7 +282,6 @@ section .MallList{
 section .MallList>div:first-of-type{
 	display: flex;
 	flex-direction: column;
-	/*justify-content: flex-end;*/
 }
 section .MallList>div:nth-of-type(2){
 	display: flex;

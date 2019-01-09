@@ -15,7 +15,7 @@
 			</div>
 			
 		<section>
-   		<router-view @toparent="getdata"></router-view>
+   		<router-view ></router-view>
    	</section>
    	<footer>
    		<router-link to="/" tag="span">首页</router-link>
