@@ -74,7 +74,7 @@
 						</div>
 						
 						<ul class="mallList">
-							<li>
+							<li v-for="n in 9">
 								<img src="" width="150" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
@@ -87,7 +87,7 @@
 				<mt-tab-container-item id="MallSkin">
 					<aside class="aside">
 						<ul class="mallList">
-							<li>
+							<li v-for="n in 9">
 								<img src="" width="150" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
@@ -100,7 +100,7 @@
 				<mt-tab-container-item id="MallCosmetics">
 					<aside class="aside">
 						<ul class="mallList">
-							<li>
+							<li v-for="n in 9">
 								<img src="" width="150" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
@@ -156,9 +156,9 @@ header .mint-searchbar{
 aside{
 	padding: 0 15px;
 }
-aside.aside{
+/*aside.aside{
 	padding: 0 12px;
-}
+}*/
 aside .activity{
 	width: 100%;
 	height: 100px;
@@ -242,5 +242,59 @@ ul.mallList li img{
 ul.mallList li p:nth-of-type(2){
 	color: #8C8C8C;
 	margin-bottom: 10px;
+}
+
+section .Mall{
+	background: #F8F8F8;
+	border-bottom: 1px solid #AAAAAA;
+}
+section .Mall>div{
+	background-image: none;
+	padding: 10px;
+}
+/*section .Mall>button{
+	height: 30px;
+	margin-left: 20px;
+}*/
+section .Mall:last-of-type{
+	border-bottom: none;
+}
+section .MallImg{
+	display: flex;
+}
+section .MallList{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1;
+	font-size: 12px;
+	margin-left: 20px;
+	padding: 8px 0;
+}
+section .MallList>div:first-of-type{
+	display: flex;
+	flex-direction: column;
+	/*justify-content: flex-end;*/
+}
+section .MallList>div:nth-of-type(2){
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+section .Mall button{
+	margin-left: 20px;
+	height: 26px;
+	border-radius: 15px;
+	font-size: 12px;
+}
+section .MallList>div p:first-of-type{
+	color: #101010;
+	font-weight: 700;
+	font-size: 14px;
+}
+section .MallList>div p:nth-child(2){
+	margin-top: 6px;
+	color: #8C8C8C;
+	line-height: 1.2;
 }
 </style>

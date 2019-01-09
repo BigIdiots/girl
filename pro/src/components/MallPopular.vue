@@ -28,13 +28,35 @@
 			</mt-navbar>
 			
 			<mt-tab-container v-model="active" swipeable="true">
+				<!--18限定美妆-->
 				<mt-tab-container-item id="limit">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
+					<mt-cell class="Mall" v-for="n in 5">
+						<div class="MallImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
-							<div class="MallSeckillList">
+							<div class="MallList">
 								<div>
-									<p>当家花旦烈焰蓝金</p>
+									<p>
+										<mt-badge size="small" type="success">TOP{{n}}</mt-badge>
+										<span>当家花旦烈焰蓝金</span>
+									</p>
+							  		<p>Dior迪奥 红管口红 555 Ultra Kiss 3.2g</p>
+								</div>
+							  	<div>
+							  		<p>￥55</p>
+							  		<mt-button type="primary">加入购物车</mt-button>
+							  	</div>
+							</div>
+						</div>
+					</mt-cell>
+					<!--<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
+							<div class="MallList">
+								<div>
+									<p>
+										<mt-badge size="small" type="success">TOP2</mt-badge>
+										<span>日夜两用颜控标配</span>
+									</p>
 							  		<p>Shiseido Maquillage 资生堂心彩妆 心机  雪花蜜粉饼 2018新版单芯</p>
 								</div>
 							  	<div>
@@ -44,31 +66,91 @@
 							</div>
 						</div>
 					</mt-cell>
-				</mt-tab-container-item>
-
-				<mt-tab-container-item id="recommend">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-							<div class="MallSeckillList">
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
+							<div class="MallList">
 								<div>
-									<p>淡夜茉莉版大宝</p>
-							  		<p>好评大宝 100ml 管装x2</p>
+									<p>
+										<mt-badge size="small" type="success">TOP3</mt-badge>
+										<span>细腻显白玫红色</span>
+									</p>
+							  		<p>Suqqu 四色眼影盘 限定版 06 晚霞红 5.6g
+</p>
 								</div>
 							  	<div>
 							  		<p>￥55</p>
-							  		<mt-badge size="small" color="#888">加入购物车</mt-badge>
+							  		<mt-button type="primary">加入购物车</mt-button>
 							  	</div>
 							</div>
 						</div>
 					</mt-cell>
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
+							<div class="MallList">
+								<div>
+									<p>
+										<mt-badge size="small" type="success">TOP4</mt-badge>
+										<span>粉嫩闪亮人鱼高光</span>
+									</p>
+							  		<p>BECCA 高光粉饼 LILAC GEODE 人鱼姬色 限量</p>
+								</div>
+							  	<div>
+							  		<p>￥55</p>
+							  		<mt-button type="primary">加入购物车</mt-button>
+							  	</div>
+							</div>
+						</div>
+					</mt-cell>
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="120" height="120" style="display: inline-block;">
+							<div class="MallList">
+								<div>
+									<p>
+										<mt-badge size="small" type="success">TOP5</mt-badge>
+										<span>精致少女限量收藏</span>
+									</p>
+							  		<p>O HUI欧蕙 超粉嫩空姐限量版遮瑕气垫BB霜赠口红 限量款套盒</p>
+								</div>
+							  	<div>
+							  		<p>￥55</p>
+							  		<mt-button type="primary">加入购物车</mt-button>
+							  	</div>
+							</div>
+						</div>
+					</mt-cell>-->
+					<div class="mallBtn">
+						<router-link to="/MallLimit" tag="div">
+							<mt-button plain>点击查看更多</mt-button>
+						</router-link>
+					</div>
 				</mt-tab-container-item>
-
+				<!--达人推荐-->
+				<mt-tab-container-item id="recommend">
+					<div style="margin: 5px 0;" v-for="n in 10">
+						<img src="../assets/logo.png" width="100%" height="200px" style="margin-bottom: -40px;"/>
+						<mt-cell class="Mall">
+							<div class="MallImg" slot="title">
+								<img slot="icon" src="../assets/logo.png" width="60" height="60" style="border-radius: 50%;">
+								<div class="MallList">
+									<div>
+										<p>软萌是一只喵</p>
+								  		<p>这盘眼影基本人手一盘，价格便宜  颜色都非常实用</p>
+									</div>
+								</div>
+							</div>
+							<mt-button type="primary">查看分享</mt-button>
+						</mt-cell>
+					</div>
+				</mt-tab-container-item>
+				<!--人气专辑-->
 				<mt-tab-container-item id="album">
-					<mt-cell class="MallSeckill">
-						<div class="MallSeckillImg" slot="title">
+					<mt-cell class="Mall">
+						<div class="MallImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-							<div class="MallSeckillList">
+							<div class="MallList">
 								<div>
 									<p>淡夜茉莉版大宝</p>
 							  		<p>好评大宝 100ml 管装x2</p>
@@ -100,53 +182,15 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-section .MallSeckill{
-	background: #F8F8F8;
-	height: 120px;
-	border-bottom: 1px solid #AAAAAA;
-}
-section .MallSeckill:last-of-type{
-	border-bottom: none;
-}
-/*section .MallSeckill button{
-	height: 25px;
-	font-size: 12px;
-	width: 65px;
-	margin-left: 30px;
-	align-self: flex-end;
-	margin-top: 65px;
-}*/
-section .MallSeckillImg{
-	display: flex;
-}
-section .MallSeckillList{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	font-size: 12px;
-	height: 110px;
-	margin-left: 20px;
-	padding: 5px 0;
-}
-section .MallSeckillList>div:last-child{
-	display: flex;
-	align-items: flex-end;
-}
-section .MallSeckillList>div:last-child button{
-	margin-left: 80px;
-	width: 90px;
-	height: 26px;
-	border-radius: 15px;
-	font-size: 12px;
-}
-section .MallSeckillList>div p:first-of-type{
-	color: #101010;
-	font-weight: 700;
-	font-size: 14px;
-}
-section .MallSeckillList>div p:nth-child(2){
-	margin-top: 6px;
-	color: #8C8C8C;
-	line-height: 1.2;
-}
+	section .mallBtn{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 8px 0;
+	}
+	section .mallBtn button{
+		width: 200px;
+		height: 40px;
+		border-radius: 20px;
+	}
 </style>
