@@ -52,7 +52,7 @@
 
 <style>
 	
-	span{
+	section .detailsOne span{
 		display: block;
 		padding: 16px 36px 46px 40px;
 		font-size: 14px;
