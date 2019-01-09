@@ -1,7 +1,7 @@
 <template>
 	<div id="">
 		<article>
-			<router-link to='*'><img src="#" /></router-link>
+			<router-link to='*' ><img src="#" style="width: 100%;height: 230px;margin: 30px 0 20px 0;background-size: 100%;"/></router-link>
 			<p>数据模仿</p>
 			<div class="info">
 				<img src="*"/>
@@ -32,12 +32,6 @@
 	article{
 		border-bottom: 1px solid #E8E8E8;
 		padding: 0 10px;
-	}
-	article a img{
-		width: 100%;
-		height: 230px;
-		margin: 30px 0 20px 0;
-		background-size:100% ;
 	}
 	article p{
 		margin-left: 28px;
