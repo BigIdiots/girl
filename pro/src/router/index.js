@@ -26,7 +26,8 @@ import NewsAdd from '@/components/NewsAdd'//消息-新增关注
 import NewsInform from '@/components/NewsInform'//消息-通知消息
 import NewsPrivate from '@/components/NewsPrivate'//消息-私信
 import Details from '@/components/Details'//商品详情
-import Official from '@/components/Official'
+import Official from '@/components/Official'//客服对话
+import Setting from '@/components/Setting'
 Vue.use(Router)
 
 export default new Router({
@@ -143,8 +144,12 @@ export default new Router({
 				component:Details
 			},
 			{
-				path:'/official',
+				path:'/official',//客服对话
 				component:Official
+			},
+			{
+				path:'/setting',
+				component:Setting
 			}
   ]
 })

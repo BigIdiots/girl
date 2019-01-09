@@ -33,14 +33,14 @@
 <style>
 	.newsList{
 		margin-top: 10px;
-		background: #CCCCCC;
+		background: #E8E8E8;
 	}
 	.newsList p{
 		padding-left: 7px;
 		height: 58px;
 		line-height: 58px;
 		font-size: 14px;
-		border-bottom: 1px solid #656B79;
+		border-bottom: 1px solid #CCCCCC;
 	}
 	.tops{
 		margin: 8px 0 15px;
