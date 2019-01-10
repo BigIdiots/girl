@@ -226,7 +226,7 @@ ul.mallList{
 	justify-content: space-between;
 	flex-wrap: wrap;
 	font-size: 14px;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 }
 ul.mallList li{
 	padding: 10px;
@@ -245,16 +245,14 @@ section{
 	position: relative;
 }
 section .MallNav{
-	position: absolute;
-	left: 0;
-	top: 250px;
 	width: 100%;
 	background: #AAAAAA;
-	z-index: 99;
 }
 section .MallNav.isFixed{
 	position: fixed;
+	left: 0;
 	top: 40px;
+	z-index: 99;
 }
 section .Mall{
 	background: #F8F8F8;
@@ -267,10 +265,10 @@ section .Mall>div{
 section .Mall:last-of-type{
 	border-bottom: none;
 }
-section .MallImg{
+section div.MallImg{
 	display: flex;
 }
-section .MallList{
+section div.MallList{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -279,11 +277,11 @@ section .MallList{
 	margin-left: 20px;
 	padding: 8px 0;
 }
-section .MallList>div:first-of-type{
+section div.MallList>div:first-of-type{
 	display: flex;
 	flex-direction: column;
 }
-section .MallList>div:nth-of-type(2){
+section div.MallList>div:nth-of-type(2){
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
@@ -294,12 +292,12 @@ section .Mall button{
 	border-radius: 15px;
 	font-size: 12px;
 }
-section .MallList>div p:first-of-type{
+section div.MallList>div p:first-of-type{
 	color: #101010;
 	font-weight: 700;
 	font-size: 14px;
 }
-section .MallList>div p:nth-child(2){
+section div.MallList>div p:nth-child(2){
 	margin-top: 6px;
 	color: #8C8C8C;
 	line-height: 1.2;

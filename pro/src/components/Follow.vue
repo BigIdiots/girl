@@ -1,27 +1,29 @@
 <template>
 	<div id="">
-		<article class="folArt">
-			<router-link to='/*' tag="div">
+		<ul class="follUl">
+			<li class="follList special" v-for="n in 9">
+				<router-link to='/*' tag="div">
 				<img src="#" style="width: 100%;height: 230px;" />
-			</router-link>
-			<div class="info">
-				<p>今日穿搭。很oversize</p>
-				<div>
-					<img src="*" width="44" height="44" />
+				</router-link>
+				<div class="info">
+					<p class="multiLine">今日穿搭。很oversize</p>
 					<div>
-						<router-link to='#' tag="span">
-							<mt-button type="danger">收藏</mt-button>
-						</router-link>
-						<router-link to='#' tag="span">
-							<mt-button type="primary">评论</mt-button>
-						</router-link>
-						<router-link to='#' tag="span">
-							<mt-button type="default">点赞</mt-button>
-						</router-link>
+						<img src="*" width="44" height="44" />
+						<div>
+							<router-link to='#' tag="span">
+								<mt-button type="danger">收藏</mt-button>
+							</router-link>
+							<router-link to='#' tag="span">
+								<mt-button type="primary">评论</mt-button>
+							</router-link>
+							<router-link to='#' tag="span">
+								<mt-button type="default">点赞</mt-button>
+							</router-link>
+						</div>
 					</div>
 				</div>
-			</div>
-		</article>
+			</li>
+		</ul>
 	</div>
 </template>
 
@@ -37,38 +39,50 @@
 </script>
 
 <style>
-	article.folArt {
+	ul.follUl{
 		display: flex;
-		flex-direction: column;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+	ul.follUl.otherUl{
+		padding: 0 18px;
+	}
+	li.follList {
+		width: 100%;
 		border-bottom: 1px solid #E8E8E8;
-		margin-top: 25px;
-		padding: 0 10px;
+		margin-top: 15px;
 		color: #8C8C8C;
 	}
-	
-	article.folArt:last-child {
+	li.follList.special{
+		padding: 0 15px;
+	}
+	li.follList.otherList{
+		width: 165px;
+		border-bottom: none;
+	}
+	li.follList:last-child {
 		margin-bottom: 8px;
 	}
 	
-	article.folArt .info {
+	li.follList .info {
 		display: flex;
 		flex-direction: column;
 		padding: 10px;
 	}
 	
-	article.folArt .info img {
+	li.follList .info img {
 		border-radius: 50%;
 		margin-top: 5px;
 		overflow: hidden;
 	}
 	
-	article.folArt .info>div {
+	li.follList .info>div {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-end;
 	}
 	
-	article.folArt .info button {
+	li.follList .info button {
 		width: 40px;
 		height: 30px;
 		font-size: 12px;

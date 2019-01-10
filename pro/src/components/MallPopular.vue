@@ -1,33 +1,33 @@
 <template>
 	<div class="hello">
 		<mt-header title="人气产品">
-		  <router-link to="/mall" slot="left">
-		    <mt-button icon="back" @click="back()">返回</mt-button>
-		  </router-link>
-		  <mt-button icon="more" slot="right"></mt-button>
+			<router-link to="/mall" slot="left">
+				<mt-button icon="back" @click="back()">返回</mt-button>
+			</router-link>
+			<mt-button icon="more" slot="right"></mt-button>
 		</mt-header>
 
 		<section style="margin-top: 2px;" ref="viewBox">
 			<img src="../assets/logo.png" width="100%" height="145px" />
 			<aside style="margin-bottom: 6px;">
-			<router-link to="/MallActivity" class="activity">
-				<div>
-					<img src="" width="80" height="80" />
+				<router-link to="/MallActivity" class="activity">
 					<div>
-						<p>春节来了</p>
-						<p style="font-size: 16px;">抢春节特惠</p>
+						<img src="" width="80" height="80" />
+						<div>
+							<p>春节来了</p>
+							<p style="font-size: 16px;">抢春节特惠</p>
+						</div>
 					</div>
-				</div>
-				<span>GO</span>
-			</router-link>
+					<span>GO</span>
+				</router-link>
 			</aside>
-			
+
 			<mt-navbar v-model="active" :class="{'MallNav':'true','isFixed':istrue}">
 				<mt-tab-item id="limit" style="padding: 10px 0;">18限定美妆</mt-tab-item>
 				<mt-tab-item id="recommend" style="padding: 10px 0;">达人推荐</mt-tab-item>
 				<mt-tab-item id="album" style="padding: 10px 0;">人气专辑</mt-tab-item>
 			</mt-navbar>
-			
+
 			<mt-tab-container v-model="active" :swipeable="true">
 				<!--18限定美妆-->
 				<mt-tab-container-item id="limit">
@@ -40,12 +40,12 @@
 										<mt-badge size="small" type="success">TOP1</mt-badge>
 										<span>当家花旦烈焰蓝金</span>
 									</p>
-							  		<p>Dior迪奥 红管口红 555 Ultra Kiss 3.2g</p>
+									<p class="multiLine">Dior迪奥 红管口红 555 Ultra Kiss 3.2g</p>
 								</div>
-							  	<div>
-							  		<p>￥55</p>
-							  		<mt-button type="primary">加入购物车</mt-button>
-							  	</div>
+								<div>
+									<p>￥55</p>
+									<mt-button type="primary">加入购物车</mt-button>
+								</div>
 							</div>
 						</div>
 					</mt-cell>
@@ -131,14 +131,14 @@
 				<!--达人推荐-->
 				<mt-tab-container-item id="recommend">
 					<div style="margin: 5px 0;">
-						<img src="../assets/logo.png" width="100%" height="200px" style="margin-bottom: -40px;"/>
+						<img src="../assets/logo.png" width="100%" height="200px" style="margin-bottom: -40px;" />
 						<mt-cell class="Mall">
 							<div class="MallImg" slot="title">
 								<img slot="icon" src="../assets/logo.png" width="60" height="60" style="border-radius: 50%;">
 								<div class="MallList">
 									<div>
 										<p>软萌是一只喵</p>
-								  		<p>这盘眼影基本人手一盘，价格便宜  颜色都非常实用</p>
+										<p class="multiLine">这盘眼影基本人手一盘，价格便宜 颜色都非常实用</p>
 									</div>
 								</div>
 							</div>
@@ -148,18 +148,18 @@
 				</mt-tab-container-item>
 				<!--人气专辑-->
 				<mt-tab-container-item id="album">
-					<mt-cell class="Mall">
+					<mt-cell class="Mall" v-for="n in 10">
 						<div class="MallImg" slot="title">
 							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
 							<div class="MallList">
 								<div>
 									<p>淡夜茉莉版大宝</p>
-							  		<p>好评大宝 100ml 管装x2</p>
+									<p>好评大宝 100ml 管装x2</p>
 								</div>
-							  	<div>
-							  		<p>￥55</p>
-							  		<mt-badge type="primary">加入购物车</mt-badge>
-							  	</div>
+								<div>
+									<p>￥55</p>
+									<mt-badge type="primary">加入购物车</mt-badge>
+								</div>
 							</div>
 						</div>
 					</mt-cell>
@@ -176,27 +176,27 @@
 			return {
 				src: '',
 				active: 'limit',
-				istrue:''
+				istrue: ''
 			}
 		},
 		mounted: function() {
 			this.box = this.$refs.viewBox
-			this.box.addEventListener('scroll',this.handleScroll,true)// 监听（绑定）滚轮滚动事件
-			}, 
-		methods: {
-			handleScroll () {
-			  var scrollTop = this.$refs.viewBox.scrollTop
-			  if (scrollTop > 250) {
-			    this.istrue = true
-			  } else {
-			    this.istrue = false
-			  }
-			},
-			back(){
-		  		this.$router.go(-1);
-		  	}
+			this.box.addEventListener('scroll', this.handleScroll, true) // 监听（绑定）滚轮滚动事件
 		},
-		destroyed:function() {
+		methods: {
+			handleScroll() {
+				var scrollTop = this.$refs.viewBox.scrollTop
+				if(scrollTop > 250) {
+					this.istrue = true
+				} else {
+					this.istrue = false
+				}
+			},
+			back() {
+				this.$router.go(-1);
+			}
+		},
+		destroyed: function() {
 			window.removeEventListener('scroll', this.handleScroll); //  离开页面清除（移除）滚轮滚动事件
 		}
 	}
@@ -204,13 +204,14 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-	section .mallBtn{
+	section .mallBtn {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		padding: 8px 0;
 	}
-	section .mallBtn button{
+	
+	section .mallBtn button {
 		width: 200px;
 		height: 40px;
 		border-radius: 20px;
