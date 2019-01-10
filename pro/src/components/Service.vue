@@ -71,7 +71,7 @@
 </script>
 
 <style>
-		li{
+		/*li{
             padding-left: 10px;
             line-height: 2;
         }
@@ -84,7 +84,7 @@
             padding: 0 50px;
         }*/
 
-        .list .title{
+        /*.list .title{
             border: 1px solid #ccc;
             padding: 10px 5px;
             cursor: pointer;
@@ -101,9 +101,9 @@
         	margin-top: 10px;
         	display: flex;
         	justify-content: space-around;
-        	/*align-items: center;*/
-        }
-        #apps{
+        	align-items: center;
+        }*/
+        /*#apps{
         	width: 100%;
         }
         .servicesShop span{
@@ -113,5 +113,5 @@
         .servicesShop p{
         	line-height: 23px;
         	padding: 17px;
-        }
+        }*/
 </style>

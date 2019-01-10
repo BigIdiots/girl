@@ -10,8 +10,8 @@
 		</header>
 
 		<section>
-			<article>
-				<img src="" />
+			<article class="drafts">
+				<img src=""  style="width: 100px; height: 100px;margin: 15px;"/>
 				<div>
 					<h2><span>很可爱</span></h2>
 					<time>2017-10-01 14:54:22</time>
@@ -35,7 +35,7 @@
 </script>
 
 <style>
-	section article {
+	section article.drafts{
 		height: 140px;
 		display: flex;
 		padding: 9px 7px;
@@ -43,13 +43,13 @@
 		margin-top: 5px;
 	}
 	
-	section article img {
+	/*section article img {
 		width: 100px;
 		height: 100px;
 		margin: 15px;
-	}
+	}*/
 	
-	section article div {
+	section article.drafts>div {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
