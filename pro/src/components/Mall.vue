@@ -20,7 +20,7 @@
 			<mt-tab-container v-model="active" :swipeable=true>
 				<mt-tab-container-item id="MallRecommend">
 					<aside>
-						<mt-swipe :auto="3000" style="height:200px" :stopPropagation="true" :prevent="true">
+						<mt-swipe :auto="3000" style="height:200px" :stopPropagation="true">
 							<mt-swipe-item style="background: red;">1</mt-swipe-item>
 							<mt-swipe-item style="background: yellow;">2</mt-swipe-item>
 							<mt-swipe-item style="background: pink;">3</mt-swipe-item>
@@ -267,6 +267,23 @@ section .Mall:last-of-type{
 }
 section div.MallImg{
 	display: flex;
+}
+section div.MallPosition{
+	position: relative;
+	
+}
+section div.MallPosition>div{
+	width: 118px;
+	height: 110px;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	display: flex;
+	flex-direction: column;
+	background: pink;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 10px 6px;
 }
 section div.MallList{
 	display: flex;

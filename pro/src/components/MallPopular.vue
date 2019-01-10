@@ -131,7 +131,17 @@
 				<!--达人推荐-->
 				<mt-tab-container-item id="recommend">
 					<div style="margin: 5px 0;">
-						<img src="../assets/logo.png" width="100%" height="200px" style="margin-bottom: -40px;" />
+						<div class="MallPosition">
+							<img src="../assets/logo.png" width="100%" height="200px" style="margin-bottom: -40px;" />
+							<div>
+								<p>Venus 大理石眼影盘</p>
+								<p>
+									<span style="font-size: 14px;">￥125</span>
+									<span style="color: #8C8C8C;text-decoration: line-through;">￥239</span>
+								</p>
+								<img src="../assets/logo.png" width="85" height="65" style="align-self: center;" />
+							</div>
+						</div>
 						<mt-cell class="Mall">
 							<div class="MallImg" slot="title">
 								<img slot="icon" src="../assets/logo.png" width="60" height="60" style="border-radius: 50%;">
@@ -142,27 +152,52 @@
 									</div>
 								</div>
 							</div>
-							<mt-button type="primary">查看分享</mt-button>
+							<router-link to="/ShareDetail">
+								<mt-button type="primary">查看分享</mt-button>
+							</router-link>
 						</mt-cell>
 					</div>
 				</mt-tab-container-item>
 				<!--人气专辑-->
 				<mt-tab-container-item id="album">
-					<mt-cell class="Mall" v-for="n in 10">
-						<div class="MallImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="110" height="110" style="display: inline-block;">
-							<div class="MallList">
-								<div>
-									<p>淡夜茉莉版大宝</p>
-									<p>好评大宝 100ml 管装x2</p>
-								</div>
-								<div>
-									<p>￥55</p>
-									<mt-badge type="primary">加入购物车</mt-badge>
-								</div>
-							</div>
+					<div class="MallTitl" v-for="n in 6">
+						<div>
+							<p>职场面试妆 轻松斩offer</p>
+							<p>秋招求职季，化一个得体又大方的面试妆容就靠TA</p>
+							<img src="../assets/logo.png" width="100%" height="120" />
 						</div>
-					</mt-cell>
+						<div class="">
+							<mt-swipe :auto="0" :continuous="false" :show-indicators="false" :stopPropagation="true" style="height: 140px;">
+								<mt-swipe-item>
+									<ul class="MallDl">
+										<li v-for="n in 4">
+											<img src="../assets/logo.png" width="70" height="70" />
+											<div>
+												<p class="multiLine">毛孔隐形妆前乳</p>
+												<p>￥85</p>
+											</div>
+
+										</li>
+									</ul>
+								</mt-swipe-item>
+								<mt-swipe-item>
+									<ul class="MallDl">
+										<li v-for="n in 3">
+											<img src="../assets/logo.png" width="70" height="70" />
+											<p class="multiLine">但是噶三维股份蓝</p>
+											<p>￥85</p>
+										</li>
+										<li class="MallMore">
+											<router-link to="/MallMore">
+												<mt-button plain>查看更多</mt-button>
+											</router-link>
+										</li>
+									</ul>
+
+								</mt-swipe-item>
+							</mt-swipe>
+						</div>
+					</div>
 				</mt-tab-container-item>
 			</mt-tab-container>
 		</section>
@@ -215,5 +250,55 @@
 		width: 200px;
 		height: 40px;
 		border-radius: 20px;
+	}
+	
+	div.MallTitl {
+		margin: 8px 0;
+	}
+	
+	div.MallTitl>div:first-child {
+		padding: 10px;
+		background: #F8F8F8;
+	}
+	
+	div.MallTitl>div:first-child p:last-of-type {
+		font-size: 12px;
+		color: #8C8C8C;
+	}
+	
+	ul.MallDl {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 10px;
+	}
+	
+	ul.MallDl li {
+		width: 70px;
+		display: flex;
+		flex-direction: column;
+		padding: 5px;
+		background: #F8F8F8;
+	}
+	
+	ul.MallDl li>div {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	
+	ul.MallDl p {
+		font-size: 12px;
+	}
+	
+	ul.MallDl li.MallMore {
+		height: 100px;
+		align-self: center;
+	}
+	
+	ul.MallDl li.MallMore button {
+		height: 100px;
+		font-size: 16px;
+		border: none;
 	}
 </style>
