@@ -3,7 +3,7 @@
 	<div class="hello">
 		<mt-header title="设置" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="/" slot="left">
-			    <mt-button @click="handleClose" style="width: 30px;height: 30px;background: #fff;">返回</mt-button>
+			    <mt-button @click="" style="width: 30px;height: 30px;background: #fff;">返回</mt-button>
 			  </router-link>
 		</mt-header>
 		
@@ -11,13 +11,13 @@
 			<div class="setting_a">
 				<mt-cell
 				  title="个人资料"
-				  to="//github.com"
+				  to="#"
 				  is-link
 				  >
 				</mt-cell>
 				<mt-cell
 				  title="账号与安全"
-				  to="//github.com"
+				  to="#"
 				  is-link
 				  >
 				</mt-cell>
