@@ -26,10 +26,12 @@ import NewsAdd from '@/components/NewsAdd'//消息-新增关注
 import NewsInform from '@/components/NewsInform'//消息-通知消息
 import NewsPrivate from '@/components/NewsPrivate'//消息-私信
 import Details from '@/components/Details'//商品详情
+import ShareDetail from '@/components/ShareDetail'//分享详情
 import Official from '@/components/Official'//客服对话
 import Setting from '@/components/Setting'//设置  未写完
 import Mine from '@/components/Mine'//我的资料
 
+import Setting from '@/components/Setting'//设置
 Vue.use(Router)
 
 export default new Router({
@@ -144,6 +146,10 @@ export default new Router({
 			{
 				path:'/details',//商品详情
 				component:Details
+			},
+			{
+				path:'/ShareDetail',//商品详情
+				component:ShareDetail
 			},
 			{
 				path:'/official',//客服对话

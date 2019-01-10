@@ -23,7 +23,7 @@
 							<div class="MallList">
 								<div>
 									<p>当家花旦烈焰蓝金</p>
-							  		<p>Dior迪奥 红管口红 555 Ultra Kiss 3.2g</p>
+							  		<p class="multiLine">Dior迪奥 红管口红 555 Ultra Kiss 3.2g</p>
 								</div>
 							  	<div>
 							  		<p>￥245</p>
@@ -86,15 +86,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-	section .mallBtn{
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 8px 0;
-	}
-	section .mallBtn button{
-		width: 200px;
-		height: 40px;
-		border-radius: 20px;
-	}
 </style>
