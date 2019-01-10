@@ -1,7 +1,7 @@
 <template>
 	<!--我的收藏-->
 	<div id="shoucang">
-		<header>
+		<header class="header">
 			<router-link to="/" tag="em">返回</router-link>
 			<router-link to="/collectAll" tag="span" style="margin-left: 65px;">所有收藏</router-link>
 			<router-link to="/collectAlbum" tag='span' style="margin-right: 100px;">我的专辑</router-link>
@@ -35,7 +35,7 @@
 		flex-direction: column;
 	}
 	
-	header {
+	header.header{
 		position: relative;
 		display: flex;
 		justify-content: space-between;
