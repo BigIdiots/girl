@@ -50,7 +50,7 @@ header{
 	position: relative;
 	display: flex;
 	justify-content: center;
-	height: 50px;
+	height: 40px;
 	background: #f1f1f1;
 	color: #a1a1a1;
 	font-size: 14px;
@@ -59,8 +59,8 @@ header img{
 	position: absolute;
 	left: 10px;
 	top: 0;
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 	overflow: hidden;
 	border-radius: 50%;
 	background: #fff;
@@ -69,8 +69,9 @@ header>span{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 50px;
-	height: 50px;
+	/*min-width: 50px;*/
+	padding: 0 10px;
+	height: 40px;
 	font-weight: 900;
 }
 header:hover>span:first-of-type{
