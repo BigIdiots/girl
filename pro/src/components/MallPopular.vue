@@ -37,7 +37,7 @@
 							<div class="MallList">
 								<div>
 									<p>
-										<mt-badge size="small" type="success">TOP{{n}}</mt-badge>
+										<mt-badge size="small" type="success">TOP1</mt-badge>
 										<span>当家花旦烈焰蓝金</span>
 									</p>
 							  		<p>Dior迪奥 红管口红 555 Ultra Kiss 3.2g</p>

@@ -1,13 +1,25 @@
 <template>
 	<div id="">
-		<article>
-			<router-link to='*' ><img src="#" style="width: 100%;height: 230px;margin: 30px 0 20px 0;background-size: 100%;"/></router-link>
-			<p>数据模仿</p>
+		<article class="folArt">
+			<router-link to='/*' tag="div">
+				<img src="#" style="width: 100%;height: 230px;"/>
+			</router-link>
 			<div class="info">
-				<img src="*"/>
-				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #F1F1F1;line-height: 30px;text-align: center;margin-left: 154px;">收藏</router-link>
-				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #F1F1F1;line-height: 30px;text-align: center;margin: 0 10px;">评论</router-link>
-				<router-link to='#' tag="span" style="width: 41px;height: 30px;background: #F1F1F1;line-height: 30px;text-align: center;">点赞</router-link>
+				<p>今日穿搭。很oversize</p>
+				<div>
+					<img src="*" width="44" height="44"/>
+					<div>
+						<router-link to='#' tag="span">
+						<mt-button type="danger">收藏</mt-button>
+					</router-link>
+					<router-link to='#' tag="span">
+						<mt-button type="primary">评论</mt-button>
+					</router-link>
+					<router-link to='#' tag="span">
+						<mt-button type="default">点赞</mt-button>
+					</router-link>
+					</div>
+				</div>
 			</div>
 		</article>
 	</div>
@@ -29,22 +41,35 @@
 	
 
 <style>
-	article{
+	article.folArt{
 		border-bottom: 1px solid #E8E8E8;
+		margin-top: 25px;
 		padding: 0 10px;
+		color: #8C8C8C;
 	}
-	article p{
-		margin-left: 28px;
+	article.folArt:last-child{
+		margin-bottom: 8px;
 	}
-	.info{
+	article.folArt .info{
 		display: flex;
-		align-items: center;
-		
+		flex-direction: column;
+		padding: 10px;
 	}
-	.info img{
-		width: 50px;
-		height: 50px;
+	article.folArt .info img{
 		border-radius: 50%;
+		margin-top: 5px;
 		overflow: hidden;
+	}
+	article.folArt .info>div{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+	}
+	article.folArt .info button{
+		width: 40px;
+		height: 30px;
+		font-size: 12px;
+		padding: 5px;
+		margin-left: 5px;
 	}
 </style>
