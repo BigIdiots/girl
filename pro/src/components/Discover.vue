@@ -112,7 +112,8 @@
 	 请求qs方法：
 	 * 只有当post请求就写，get请求不用
 	 * 为的是将post请求时，将请求的数据参数的形式request payload改为form data，
-	 * 也就是将请求的数据（JSON格式）转化
+	 * 默认情况下，axios将JavaScript对象序列化为JSON
+	 * 用Qs.stringify()将对象序列化成URL的形式，Qs是axios里面自带的，所以直接引入就可以了
 	 *注：
 	 * ①默认情况下，axios将JavaScript对象序列化为JSON。要以application/x-www-form-urlencoded格式发送数据
 	 * ②我们使用不同请求方式时，参数的传输方式是不一样的，但是服务端在取我们接口的请求参数时，
