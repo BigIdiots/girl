@@ -8,31 +8,20 @@
 		
 		<section>
 			<div class="detailsOne">
-				<img src="../../build/logo.png" height="350"/>
-				<mt-cell >
-					<div class="yonghu" slot="title" style="height: 104px;line-height: 24px;">
-						<div class="">
-							<p>￥242</p>
-							<p>深豆沙色显气质。黑管唇釉Carmin Session#407</p>
-						</div>							 	
-					</div>
-					<mt-button size="small" style="width: 80px;height: 20px;">心愿单</mt-button>
-				</mt-cell>
-				<span >大热断货王 黑管407！#407#有人说是枯玫瑰色，涂抹
-					出来是带细闪的豆沙棕色，薄涂紫调多一点，是只秋冬
-					气质的唇釉，真的好貌美，之所以这么大火大概是因为
-					它真的完全不挑皮而且实在是太突显气质了。而且和镜
-					面唇釉相比，他的黏稠度变小了。
-				</span>
-				<router-link to="#" class="kefu" tag="div">
-					客服
-				</router-link>	
+				<img src="../../build/logo.png" width="100%" height="240"/>
+				<p>
+					仅仅是肯定积分时代峻峰就快乐圣诞节按法律框架空间分
+					回复大家撒谎复合肥很放得开缴费萨科技方会计师空间发
+					分行贷款缴费的精髓附近的空间空间案件发动机爱福家代
+					减肥的索拉卡疯狂绝对是附加费的刷卡缴费看时间阿道夫
+					肯定是减肥
+				</p>
 			</div>
 		</section>
 		
 		<footer>
 			<router-link to="#" tag="em" style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">店铺</router-link>
-   			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">购物车</router-link>
+   			<router-link to="/details" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">购物车</router-link>
    			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">加入购物车</router-link>
    			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">立即购买</router-link>
 		</footer>
@@ -52,9 +41,10 @@
 
 <style>
 	
-	section .detailsOne span{
+	/*section .detailsOne p{
 		display: block;
 		padding: 16px 36px 46px 40px;
+		line-height: 2;
 		font-size: 14px;
 	}
 	.detailsOne{
@@ -88,5 +78,5 @@
 	}
 	footer em{
 		font-style:normal ;
-	}
+	}*/
 </style>
