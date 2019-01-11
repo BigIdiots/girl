@@ -30,6 +30,7 @@ import ShareDetail from '@/components/ShareDetail'//分享详情
 import Official from '@/components/Official'//客服对话
 import Setting from '@/components/Setting'//设置  未写完
 import Mine from '@/components/Mine'//我的资料
+import Register from '@/components/Register'
 Vue.use(Router)
 
 export default new Router({
@@ -160,6 +161,10 @@ export default new Router({
 			{
 				path:'/mine',//我的资料
 				component:Mine
+			},
+			{
+				path:'/register',
+				component:Register
 			}
   ]
 })

@@ -6,38 +6,33 @@
 		
 		<section>
 			<div class="zhuti">
-				<h3>手机密码登录</h3>
+				<h3>注册</h3>
 				<mt-field  placeholder="请输入手机号" v-model="phonenum" style="margin:0 0 4px;"></mt-field>
-				<mt-field placeholder="请输入用户密码" v-model="pass"></mt-field>
-				<mt-button size="large" @click="" style="font-size: 16px;">登录</mt-button>
-				<div class="zhutis">
-					<router-link to="#" tag="span" style="color: #656b79;font-size: 14px;">忘记密码</router-link>
-					<router-link to="/register" tag="span" style="color: #656b79;font-size: 14px;">注册账号</router-link>
+				<mt-field placeholder="请输入用户密码" v-model="pass" ></mt-field>
+				<mt-field placeholder="确认密码" v-model="passe"></mt-field>
+				<mt-field placeholder="请输入验证码" v-model="test">
+					<mt-button size="small" @click="" style="font-size: 16px;">发送验证码</mt-button>
+				</mt-field>
+
+					<router-link to="/login" tag="span" style="color: #656b79;font-size: 14px;">密码登录</router-link>
 				<!--需要更改连接-->
-				</div>
 			</div>
 		</section>
 		
 		<footer style="height: 150px;background: #FFFFFF;">
-			<div class="rests">
-				<h4>第三方登录</h4>
-				<router-link to="/weixin" tag="em">微信</router-link>
-				<router-link to="/tengxun" tag="em">QQ</router-link>
-				<router-link to="/weibo" tag="em">微博</router-link>
-			</div>
 		</footer>
 	</div>
 </template>
 
 <script>
-	export default{
-		name:'Login',
-		data(){
-			return{
-				src:''
-			}
-		}
-	}
+	export default {
+  name: 'Register',
+  data () {
+    return {
+      src: ''
+    }
+  }
+}
 </script>
 
 <style>
@@ -83,9 +78,5 @@
 	 }
 	 .mint-cell-wrapper{
 	 	background-position:bottom left
-	 }
-	 section .zhuti .zhutis{
-	 	display: flex;
-	 	justify-content: space-between;
 	 }
 </style>
