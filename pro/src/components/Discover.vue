@@ -1,25 +1,25 @@
 <template>
 	<div class="hello">
 		<mt-navbar v-model="active">
-			<mt-tab-item id="DiscoverCommit">推荐</mt-tab-item>
-			<mt-tab-item id="DiscoverMakeup">彩妆</mt-tab-item>
-			<mt-tab-item id="DiscoverSkin">护肤</mt-tab-item>
-			<mt-tab-item id="DiscoverVideos">视频</mt-tab-item>
+			<mt-tab-item id="1">推荐</mt-tab-item>
+			<mt-tab-item id="2">彩妆</mt-tab-item>
+			<mt-tab-item id="3">护肤</mt-tab-item>
+			<mt-tab-item id="4">视频</mt-tab-item>
 		</mt-navbar>
 
 		<section class="article">
 			<mt-tab-container v-model="active" :swipeable="true">
-				<mt-tab-container-item id="DiscoverCommit">
+				<mt-tab-container-item id="1">
 					<!--推荐-->
 					<ul class="follUl otherUl">
-						<li class="follList otherList" v-for="n in 7">
+						<li class="follList otherList" v-for="item in list">
 							<router-link to='/*' tag="div">
-								<img src="#" width="100%" height="200" />
+								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
-								<p class="multiLine">秋季穿搭：提前准备好羽绒服是不是大多数妹子老师看到过爱设计费</p>
+								<p class="multiLine">{{item.title}}</p>
 								<div>
-									<img src="*" width="40" height="40" />
+									<img src="item.headUrl" width="40" height="40" />
 									<div>
 										<router-link to='#' tag="span">
 											<mt-button type="default">点赞</mt-button>
@@ -31,17 +31,17 @@
 					</ul>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="DiscoverMakeup">
+				<mt-tab-container-item id="2">
 					<!--彩妆-->
 					<ul class="follUl otherUl">
-						<li class="follList otherList" v-for="n in 7">
+						<li class="follList otherList" v-for="item in list">
 							<router-link to='/*' tag="div">
-								<img src="#" width="100%" height="200" />
+								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
-								<p class="multiLine">秋季穿搭：提前准备好羽绒服是不是大多数妹子老师看到过爱设计费</p>
+								<p class="multiLine">{{item.title}}</p>
 								<div>
-									<img src="*" width="40" height="40" />
+									<img src="item.headUrl" width="40" height="40" />
 									<div>
 										<router-link to='#' tag="span">
 											<mt-button type="default">点赞</mt-button>
@@ -53,17 +53,17 @@
 					</ul>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="DiscoverSkin">
+				<mt-tab-container-item id="3">
 					<!--护肤-->
 					<ul class="follUl otherUl">
-						<li class="follList otherList" v-for="n in 7">
+						<li class="follList otherList" v-for="item in list">
 							<router-link to='/*' tag="div">
-								<img src="#" width="100%" height="200" />
+								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
-								<p class="multiLine">秋季穿搭：提前准备好羽绒服是不是大多数妹子老师看到过爱设计费</p>
+								<p class="multiLine">{{item.title}}</p>
 								<div>
-									<img src="*" width="40" height="40" />
+									<img src="item.headUrl" width="40" height="40" />
 									<div>
 										<router-link to='#' tag="span">
 											<mt-button type="default">点赞</mt-button>
@@ -75,7 +75,7 @@
 					</ul>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="DiscoverVideos">
+				<mt-tab-container-item id="4">
 					<!--视频-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="n in 7">
@@ -107,7 +107,7 @@
 	 * 详见：
 	 * https://github.com/mzabriskie/axios/blob/master/README.md#using-applicationx-www-form-urlencoded-format.
 	 * */
-	import axios from 'axios'//请求axios
+//	import axios from 'axios'//请求axios
 	/*
 	 请求qs方法：
 	 * 只有当post请求就写，get请求不用
@@ -125,27 +125,32 @@
 	 * 就是通过'contentType'，
 	 * 当'contentType'为"application/x-www-form-urlencoded",它才会去读取请求体数据。
 	 * */
-	import Qs from 'qs'
+//	import Qs from 'qs'
 
 	export default {
 		name: 'Discover',
 		data() {
 			return {
 				src: '',
-				active: 'DiscoverCommit',
-			}
-		},
+				active: '1',
+				list:''
+			}  
+		},	
 		mounted() {
 			var _this = this;
 			/*数据转换*/
-			var data = Qs.stringify({
-				limit: 2,
-				page: 2,
-				style: 2
+			var data = this.Qs.stringify({
+				limit: 12,
+				page: this.active,
+				style: this.active
 			});
-			axios.post('/showSimpleZone.do', data).then((data) => {
+			this.Axios.post('/showSimpleZone.do', data).then((data) => {
+				var data=data.data.data;
 				console.log(data)
+				this.list=data
+				
 			})
+//			axios.
 		}
 	}
 </script>

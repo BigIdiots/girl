@@ -6,6 +6,7 @@ import 'mint-ui/lib/style.css'
 import App from './App'
 import router from './router'
 import axios from 'axios';
+import Qs from "qs";
 
 Vue.use(MintUI)
 axios.defaults.timeout = 5000; // 在超时前，所有请求都会等待 5 秒
@@ -13,6 +14,9 @@ axios.defaults.timeout = 5000; // 在超时前，所有请求都会等待 5 秒
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 axios.defaults.baseURL = 'http://10.8.155.9:8080/beauty'; // 配置接口地址
 axios.defaults.withCredentials = false;
+
+Vue.prototype.Axios=axios;
+Vue.prototype.Qs=Qs;
 
 /* eslint-disable no-new */
 new Vue({
