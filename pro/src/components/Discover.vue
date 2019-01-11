@@ -102,37 +102,47 @@
 </template>
 
 <script>
-	
-	import axios from 'axios'
-//	let serverUrl = '/api/'  //本地调试时 
+	/*
+	 解决post请求方法（三种）：
+	 * 详见：
+	 * https://github.com/mzabriskie/axios/blob/master/README.md#using-applicationx-www-form-urlencoded-format.
+	 * */
+	import axios from 'axios'//请求axios
+	/*
+	 请求qs方法：
+	 * 只有当post请求就写，get请求不用
+	 * 为的是将post请求时，将请求的数据参数的形式request payload改为form data，
+	 * 也就是将请求的数据（JSON格式）转化
+	 *注：
+	 * ①默认情况下，axios将JavaScript对象序列化为JSON。要以application/x-www-form-urlencoded格式发送数据
+	 * ②我们使用不同请求方式时，参数的传输方式是不一样的，但是服务端在取我们接口的请求参数时，
+	 * 用的方法其实却是一样的，都是使用request.getParameter(key)来获取，
+	 * 其实是因为tomcat在中间会对请求参数进行解析处理，
+	 * 处理完把解析出来的表单参数放在request parameter map中，
+	 * 所以后端就可以通过request.getParameter(key)来统一获取数据，
+	 * 而tomcat解析的时候是怎么知道当前的请求是post请求的呢，
+	 * 就是通过'contentType'，
+	 * 当'contentType'为"application/x-www-form-urlencoded",它才会去读取请求体数据。
+	 * */
+	import Qs from 'qs'
 
-	
 	export default {
 		name: 'Discover',
-//		dataUrl: serverUrl + '/showSimpleZone.do' ,
 		data() {
 			return {
 				src: '',
 				active: 'DiscoverCommit',
-//				obj:JSON.stringify([{"goodsColorId":44,"num":8}]),
-				Url:this.baseUrl+"showSimpleZone.do"
 			}
 		},
-		mounted(){
-			var _this=this;
-			/*axios({
-				method:'get',
-				url:'/api/showZone.do',
-				params:{id:2}
-			}).then((data)=>{
-//				_this.detail=data.data.data.pdesc;
-				console.log(data)
-			})*/
-			this.$post(_this.Url,{
-				limt:2,
-				page:2,
-				style:2
-			}).then((data)=>{
+		mounted() {
+			var _this = this;
+			/*数据转换*/
+			var data = Qs.stringify({
+				limit: 2,
+				page: 2,
+				style: 2
+			});
+			axios.post('/showSimpleZone.do', data).then((data) => {
 				console.log(data)
 			})
 		}
@@ -140,4 +150,5 @@
 </script>
 
 <style>
+
 </style>

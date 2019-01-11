@@ -12,13 +12,13 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
     	
-    	'/api': {  
-    target: 'http://10.8.155.63:8080/beauty', //源地址 
-    changeOrigin: true, //改变源 
-    pathRewrite: { 
-      '^/api': 'http://10.8.155.63:8080/beauty'
-      } 
-  } 
+    	/*'/api': {  
+		    target: 'http://10.8.155.9:8080/beauty', //源地址 
+		    changeOrigin: true, //改变源 
+		    pathRewrite: { 
+		      '^/api': 'http://10.8.155.9:8080/beauty'
+		      } 
+		  }*/ 
     },
 
     // Various Dev Server settings
