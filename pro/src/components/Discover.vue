@@ -102,13 +102,39 @@
 </template>
 
 <script>
+	
+	import axios from 'axios'
+//	let serverUrl = '/api/'  //本地调试时 
+
+	
 	export default {
 		name: 'Discover',
+//		dataUrl: serverUrl + '/showSimpleZone.do' ,
 		data() {
 			return {
 				src: '',
-				active: 'DiscoverCommit'
+				active: 'DiscoverCommit',
+//				obj:JSON.stringify([{"goodsColorId":44,"num":8}]),
+				Url:this.baseUrl+"showSimpleZone.do"
 			}
+		},
+		mounted(){
+			var _this=this;
+			/*axios({
+				method:'get',
+				url:'/api/showZone.do',
+				params:{id:2}
+			}).then((data)=>{
+//				_this.detail=data.data.data.pdesc;
+				console.log(data)
+			})*/
+			this.$post(_this.Url,{
+				limt:2,
+				page:2,
+				style:2
+			}).then((data)=>{
+				console.log(data)
+			})
 		}
 	}
 </script>
