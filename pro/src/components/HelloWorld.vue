@@ -160,7 +160,6 @@ footer span:nth-child(3){
 .hello .navs_a>h2{
 	font-style: normal;
 	font-size: 20px;
-	padding-bottom: 42px;
 }
 .hello .navs_a .hellos{
 	padding-left: 40px;

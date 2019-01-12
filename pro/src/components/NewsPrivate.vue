@@ -3,7 +3,7 @@
 	<div class="">
 		<mt-header title="私信" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="/news" slot="left">
-			    <mt-button icon="back" @click="back">返回</mt-button>
+			    <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			  <router-link to="#" slot="right">
 			    <mt-button  @click="back">发起私信</mt-button>
