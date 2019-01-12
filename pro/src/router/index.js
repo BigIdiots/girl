@@ -29,8 +29,11 @@ import Details from '@/components/Details'//商品详情
 import ShareDetail from '@/components/ShareDetail'//分享详情
 import Official from '@/components/Official'//客服对话
 import Setting from '@/components/Setting'//设置  未写完
-import Myself from '@/components/Myself'//我的资料
 import Register from '@/components/Register'//注册
+import YzmLogin from '@/components/YzmLogin'//验证码登录
+import ForgetPass from '@/components/ForgetPass'//忘记密码
+import ResetPass from '@/components/ResetPass'//重置密码
+import Myself from '@/components/Myself'//我的资料
 import Wish from '@/components/Wish'//心愿单
 import Indent from '@/components/Indent'
 Vue.use(Router)
@@ -66,8 +69,20 @@ export default new Router({
       component: Search
     },
     {
-    	path:'/login',//验证码登录
+    	path:'/YzmLogin',//验证码登录
+    	component:YzmLogin
+    },
+    {
+    	path:'/login',//手机号登录
     	component:Login
+    },
+    {
+    	path:'/ForgetPass',//验证码登录
+    	component:ForgetPass
+    },
+    {
+    	path:'/ResetPass',//验证码登录
+    	component:ResetPass
     },
     {
     	path:'/concern',//我的关注
