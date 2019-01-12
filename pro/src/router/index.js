@@ -29,11 +29,13 @@ import Details from '@/components/Details'//商品详情
 import ShareDetail from '@/components/ShareDetail'//分享详情
 import Official from '@/components/Official'//客服对话
 import Setting from '@/components/Setting'//设置  未写完
-import Mine from '@/components/Mine'//我的资料
 import Register from '@/components/Register'//注册
 import YzmLogin from '@/components/YzmLogin'//验证码登录
 import ForgetPass from '@/components/ForgetPass'//忘记密码
 import ResetPass from '@/components/ResetPass'//重置密码
+import Myself from '@/components/Myself'//我的资料
+import Wish from '@/components/Wish'//心愿单
+import Indent from '@/components/Indent'
 Vue.use(Router)
 
 export default new Router({
@@ -174,12 +176,20 @@ export default new Router({
 				component:Setting
 			},
 			{
-				path:'/mine',//我的资料
-				component:Mine
+				path:'/myself',//我的资料
+				component:Myself
 			},
 			{
 				path:'/register',//注册
 				component:Register
+			},
+			{
+				path:'/wish',//心愿单
+				component:Wish
+			},
+			{
+				path:'/indent',//订单
+				component:Indent
 			}
   ]
 })
