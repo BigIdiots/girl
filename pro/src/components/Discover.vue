@@ -17,7 +17,7 @@
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
-								<p class="multiLine">{{item.title}}</p>
+								<p class="multiLine">{{item.uName}}</p>
 								<div>
 									<img src="item.headUrl" width="40" height="40" />
 									<div>
@@ -39,7 +39,7 @@
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
-								<p class="multiLine">{{item.title}}</p>
+								<p class="multiLine">{{item.uName}}</p>
 								<div>
 									<img src="item.headUrl" width="40" height="40" />
 									<div>
@@ -61,7 +61,7 @@
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
-								<p class="multiLine">{{item.title}}</p>
+								<p class="multiLine">{{item.uName}}</p>
 								<div>
 									<img src="item.headUrl" width="40" height="40" />
 									<div>
