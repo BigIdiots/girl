@@ -34,8 +34,9 @@ import YzmLogin from '@/components/YzmLogin'//验证码登录
 import ForgetPass from '@/components/ForgetPass'//忘记密码
 import ResetPass from '@/components/ResetPass'//重置密码
 import Myself from '@/components/Myself'//我的资料
-import Wish from '@/components/Wish'//心愿单
-import Indent from '@/components/Indent'
+import Indent from '@/components/Indent'//订单
+import ShopCart from '@/components/ShopCart'//购物车
+import Payment from '@/components/Payment'//订单支付
 Vue.use(Router)
 
 export default new Router({
@@ -184,12 +185,16 @@ export default new Router({
 				component:Register
 			},
 			{
-				path:'/wish',//心愿单
-				component:Wish
-			},
-			{
 				path:'/indent',//订单
 				component:Indent
+			},
+			{
+				path:'/shopcart',
+				component:ShopCart
+			},
+			{
+				path:'/payment',
+				component:Payment
 			}
   ]
 })

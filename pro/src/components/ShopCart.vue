@@ -1,12 +1,12 @@
 <template>
 	<div class="hello">
-		<mt-header title="我的订单" style="background: #F8F8F8;color: #101010;">
+		<mt-header title="购物车" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="#" slot="left">
 			    <mt-button icon="back" @click="back">返回</mt-button>
 			  </router-link>
 			</mt-header>
 		
-		<div class="delete">
+		<section class="delete">
              <div class="slider">
                    <div class="content" 
                       @touchstart='touchStart'
@@ -14,15 +14,40 @@
                       @touchend='touchEnd'
                       :style="deleteSlider"
                    >
-                <!-- 插槽中放具体项目中需要内容         -->   
-                    <slot></slot>
+                <!-- 插槽中放具体项目中需要内容         --> 
+                    <slot>
+                    	<div class="MallImg" slot="title">
+							<img slot="icon" src="../assets/logo.png" width="100" height="100" style="display: inline-block;">
+							<div class="MallList">
+								<div>
+									<p>淡夜茉莉版大宝</p>
+									<p class="multiLine">好评大宝 100ml 管装x2</p>
+								</div>
+								<div>
+									<div style="flex: 1;">
+										<p>￥55</p>
+										<mt-progress :value="45" :bar-height="10">
+											<span slot="end" style="color: #8C8C8C;">已抢45%</span>
+										</mt-progress>
+									</div>
+								</div>
+							</div>
+						</div>
+                    </slot>
                    </div>
                    <div class="remove" ref='remove'>
                        		删除
                    </div>
             </div>
         
-     </div>
+     </section>
+     
+     <footer>
+     	<!--底部写结算-->
+     	<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">共计</router-link>
+     	<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">总价</router-link>
+     	<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">立即购买</router-link>
+     </footer>
 	</div>
 	
 </template>
@@ -101,23 +126,30 @@
 </script>
 
 <style scoped >
+.delete{
+        margin-top:10px ;
+        height: 20%;
+}
 .slider{
         width: 100%;
-        height:80px;
+        height:140px;
         position: relative;
-         user-select: none;}
-       .slider .content{
+
+         user-select: none;
+         }
+         
+.slider .content{
             position: absolute;
             left: 0;
             right: 0;
             top: 0;
             bottom: 0;
-            background:green;
+            background:#F8F8F8;
             z-index: 100;
             /*//    设置过渡动画*/
             transition: 0.3s;
         }
-      .slider  .remove{
+.slider  .remove{
             position: absolute;
             width:80px;
             height:80px;
