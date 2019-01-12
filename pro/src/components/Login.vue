@@ -63,29 +63,6 @@
 </script>
 
 <style>
-	/*header em{
-		font-style: normal;
-		font-size: 14px;
-		width: 80px;
-		height: 30px;
-		background: #E8E8E8;
-		line-height: 30px;
-		text-align: center;
-		position: absolute;
-		left: 8px;
-		top: 18px;
-	}*/
-	/*.zhuti{
-		width: 330px;
-		text-align: center;
-		margin:18px 0 0 24px;
-	}
-	 .zhuti h3{
-	 	font-weight: normal;
-	 	color: #656b79;
-	 	font-size: 28px;
-	 	margin-bottom: 30px;
-	 }*/
 	 .rests{
 	 	width: 100%;
 	 }
@@ -102,9 +79,6 @@
 		line-height: 30px;
 		text-align: center;
 		margin-left: 20px;
-	 }
-	 .mint-cell-wrapper{
-	 	background-position:bottom left
 	 }
 	 section .zhuti .zhutis{
 	 	width: 100%;

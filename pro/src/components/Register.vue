@@ -69,7 +69,7 @@
 				if(this.instance != "") {
 					this.instance.close();
 				}
-				this.instance = this.$toast('请输入您的密码，密码长度：6~14个字符，不能含有空格，支持标点符号');
+				this.instance = this.$toast('请输入您的密码，密码长度6-16位，数字、字母、标点符号，不能含有空格');
 			},
 			pmessage() {
 				if(this.instance != "") {
@@ -146,7 +146,7 @@
 		passjudge() {
 			var _this = this;
 			var aa = "";
-			var reg5 = /^[\x00-\xff]{6,14}$/;
+			var reg5 = /^[\x00-\xff]{6,16}$/;
 			var reg6 = /\s+/g;
 			if(_this.pass == "") {
 				aa = ""

@@ -2,13 +2,13 @@
 	<div class="hello">
 		<mt-header style="height: 50px;font-size: 24px;" title="密码找回">
 			<router-link to="/" slot="left">
-				<mt-button style="font-size: 18px;" icon="back">首页</mt-button>
+				<mt-button style="font-size: 18px;" @click="back()" icon="back">返回</mt-button>
 			</router-link>
 		</mt-header>
 		
 		<section>
 			<div class="zhuti">
-				<mt-field label="手机号:" placeholder="请输入手机号" type="tel" v-model="phone"></mt-field>
+				<mt-field label="手 机 号:" :state="phonejudge" placeholder="请输入手机号" @focus.native.capture="pmessage()" type="tel" :disableClear="true" v-model="phone"></mt-field>
 				<mt-field style="padding: 0 7px;" label="验 证 码:" placeholder="请输入验证码" :disableClear="true" v-model="test">
 					<mt-button size="small" @click="send()">发送验证码</mt-button>
 				</mt-field>
@@ -43,10 +43,20 @@
 			return{
 				src:'',
 				phone:'',
-				test:''
+				test:'',
+				instance:''
 			}
 		},
 		methods:{
+			back(){
+				this.$router.go(-1)
+			},
+			pmessage() {
+				if(this.instance != "") {
+					this.instance.close();
+				}
+				this.instance = this.$toast('请输入您的手机号码')
+			},
 			send() {
 				var _this = this;
 				if(this.phone != "") {
@@ -54,7 +64,7 @@
 						method: 'post',
 						url: '/user/loginMessage.do',
 						params: {
-							phone: this.phone
+							phone: _this.phone
 						}
 					}).then(function(data) {
 						console.log(data)
@@ -79,7 +89,7 @@
 				}else{
 					this.Axios({
 						method: 'post',
-						url: '/user/loginByMessage.do',
+						url: '/user/forgetPassword.do',
 						params: {
 							phone: _this.phone,
 							code: _this.test
@@ -87,65 +97,30 @@
 					}).then(function(data) {
 						//var data=data.data
 						console.log(data)
+						_this.$router.push("/ResetPass")
 					})
 				}
 			}
+		},
+		computed: {
+			phonejudge() {
+				var _this = this;
+				var aa = ''
+				var reg = /^1(3|5|7|8)\d{9}$/g;
+				if(_this.phone == "") {
+					aa = ""
+				} else if(reg.test(_this.phone)) {
+					aa = "success";
+					this.pstate = 1
+				} else {
+					aa = "error";
+					this.pstate = 0
+				}
+				return aa
+			},
 		}
 	}
 </script>
 
 <style>
-	/*header em{
-		font-style: normal;
-		font-size: 14px;
-		width: 80px;
-		height: 30px;
-		background: #E8E8E8;
-		line-height: 30px;
-		text-align: center;
-		position: absolute;
-		left: 8px;
-		top: 18px;
-	}*/
-	/*.zhuti{
-		width: 330px;
-		text-align: center;
-		margin:18px 0 0 24px;
-	}
-	 .zhuti h3{
-	 	font-weight: normal;
-	 	color: #656b79;
-	 	font-size: 28px;
-	 	margin-bottom: 30px;
-	 }*/
-	 .rests{
-	 	width: 100%;
-	 }
-	 .rests h4{
-	 	font-weight: normal;
-	 	color: #656b79;
-	 	font-size: 14px;
-	 }
-	 .rests em{
-	 	font-style: normal;
-	 	font-size: 14px;
-		background: #E8E8E8;
-		padding: 10px 20px;
-		line-height: 30px;
-		text-align: center;
-		margin-left: 20px;
-	 }
-	 .mint-cell-wrapper{
-	 	background-position:bottom left
-	 }
-	 section .zhuti .zhutis{
-	 	width: 100%;
-	 	display: flex;
-	 	justify-content: space-between;
-	 }
-	 section .zhuti .zhutis button{
-	 	margin: 0 10px;
-	 	height: 30px;
-	 	font-size: 14px;
-	 }
 </style>
