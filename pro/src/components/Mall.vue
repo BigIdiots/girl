@@ -91,7 +91,7 @@
 						
 						<ul class="mallList">
 							<li v-for="n in 9">
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
@@ -104,7 +104,7 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li v-for="n in 9">
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
@@ -117,7 +117,7 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li v-for="n in 9">
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
@@ -254,6 +254,7 @@ ul.mallList{
 	/*margin-top: 40px;*/
 }
 ul.mallList li{
+	width: 43%;
 	padding: 10px;
 	background: #f8f8f8;
 	margin-top: 10px;

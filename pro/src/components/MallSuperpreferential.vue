@@ -33,7 +33,7 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li>
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
@@ -46,7 +46,7 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li>
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
@@ -59,7 +59,7 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li>
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
@@ -72,7 +72,7 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li>
-								<img src="" width="150" height="150">
+								<img src="" width="100%" height="150">
 								<p>滋润丰盈肌肤神器</p>
 								<p>兰蔻精华修复肌底液</p>
 								<p>￥200</p>
