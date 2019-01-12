@@ -57,7 +57,7 @@
 		padding: 0 15px;
 	}
 	li.follList.otherList{
-		width: 165px;
+		width: 47%;
 		border-bottom: none;
 	}
 	li.follList:last-child {
