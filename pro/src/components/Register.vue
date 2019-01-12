@@ -16,7 +16,7 @@
 				</mt-field>
 				<mt-button size="large" :state="judgement" type="primary" @click="register()">注　册</mt-button>
 				<router-link to="/login" style="width: 100%;">
-					<mt-button size="large" type="danger">登　录</mt-button>
+					<mt-button size="large" type="danger">已有账号，点我登录</mt-button>
 				</router-link>
 				<!--需要更改连接-->
 			</div>
