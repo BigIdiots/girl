@@ -29,8 +29,10 @@ import Details from '@/components/Details'//商品详情
 import ShareDetail from '@/components/ShareDetail'//分享详情
 import Official from '@/components/Official'//客服对话
 import Setting from '@/components/Setting'//设置  未写完
-import Mine from '@/components/Mine'//我的资料
-import Register from '@/components/Register'
+import Myself from '@/components/Myself'//我的资料
+import Register from '@/components/Register'//注册
+import Wish from '@/components/Wish'//心愿单
+import Indent from '@/components/Indent'
 Vue.use(Router)
 
 export default new Router({
@@ -159,12 +161,20 @@ export default new Router({
 				component:Setting
 			},
 			{
-				path:'/mine',//我的资料
-				component:Mine
+				path:'/myself',//我的资料
+				component:Myself
 			},
 			{
-				path:'/register',
+				path:'/register',//注册
 				component:Register
+			},
+			{
+				path:'/wish',//心愿单
+				component:Wish
+			},
+			{
+				path:'/indent',//订单
+				component:Indent
 			}
   ]
 })

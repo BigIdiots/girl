@@ -1,7 +1,23 @@
 <template>
 	<div class="hello">
+		<div class="navs" v-show="isShow" v-on:click="toggle()">
+  		<div class="navs_a" @click.stop="show1()">
+  			<h2>更多</h2>
+  			<mt-cell title="我的关注" to="/concern"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="我的收藏" to="/collect"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="我的草稿" to="/draft"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="购物车" to="#"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="订单" to="#"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="PIN券" to="#"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="心愿单" to="#"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="pin会员卡" to="#"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="客服中心" to="/service"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="设置" to="/setting"  value="" class="hellos"></mt-cell>
+  		</div>
+  	</div>
+		
 		<header>
-			<img :src="src">
+			<img :src="src"  v-on:click="toggle()">
 			<div class="mint-searchbar">
 				<router-link to="/search" class="mint-searchbar-inner" style="background: #fff;">
 					<i class="mintui mintui-search"></i>
@@ -128,10 +144,19 @@ export default {
   data () {
     return {
       src: '',
-      active:'MallRecommend'
+      active:'MallRecommend',
+      isShow:false
     }
-  }
+  },
+  methods:{
+  	 toggle:function(){
+             this.isShow = !this.isShow;
+          },
+	 show1:function(){
+	 	
+	 }
 }
+ }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

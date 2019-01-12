@@ -3,7 +3,7 @@
 	<div class="hello">
 			<mt-header title="客服中心" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="/" slot="left">
-			    <mt-button @click="handleClose" style="width: 30px;height: 30px;background: #fff;">返回</mt-button>
+			    <mt-button icon="back" @click="back">返回</mt-button>
 			  </router-link>
 			</mt-header>
 		
