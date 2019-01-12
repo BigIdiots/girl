@@ -3,7 +3,7 @@
 	<div id="">
 		<mt-header title="收到的赞和收藏" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="/news" slot="left">
-			    <mt-button @click="handleClose" style="width: 30px;height: 30px;background: #fff;">返回</mt-button>
+			   <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			</mt-header>
 			

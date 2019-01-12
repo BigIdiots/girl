@@ -3,7 +3,7 @@
 	<div class="hello">
 		<mt-header title="新西兰邮政官方旗舰店" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="#" slot="left">
-			    <mt-button icon="back" @click="back">返回</mt-button>
+			    <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			  <router-link to="#" slot="right">
 			    <mt-button  @click="back">分享</mt-button>

@@ -37,7 +37,7 @@
    		<router-link to="/mall" tag='span'>商城</router-link>
    		<router-link to="/login" tag='span'>+</router-link>
    		<router-link to="/news" tag='span'>消息</router-link>
-   		<router-link to='/mysely' tag="span">我</router-link>
+   		<router-link to='/myself' tag="span">我</router-link>
    	</footer>
 
   </div>
@@ -160,7 +160,6 @@ footer span:nth-child(3){
 .hello .navs_a>h2{
 	font-style: normal;
 	font-size: 20px;
-	padding-bottom: 42px;
 }
 .hello .navs_a .hellos{
 	padding-left: 40px;
