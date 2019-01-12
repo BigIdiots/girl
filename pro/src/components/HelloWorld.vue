@@ -6,7 +6,7 @@
   			<mt-cell title="我的关注" to="/concern"  value="" class="hellos"></mt-cell>
   			<mt-cell title="我的收藏" to="/collect"  value="" class="hellos"></mt-cell>
   			<mt-cell title="我的草稿" to="/draft"  value="" class="hellos"></mt-cell>
-  			<mt-cell title="购物车" to="#"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="购物车" to="/shopcart"  value="" class="hellos"></mt-cell>
   			<mt-cell title="订单" to="#"  value="" class="hellos"></mt-cell>
   			<mt-cell title="PIN券" to="#"  value="" class="hellos"></mt-cell>
   			<mt-cell title="心愿单" to="#"  value="" class="hellos"></mt-cell>
@@ -37,7 +37,7 @@
    		<router-link to="/mall" tag='span'>商城</router-link>
    		<router-link to="/login" tag='span'>+</router-link>
    		<router-link to="/news" tag='span'>消息</router-link>
-   		<router-link to='/register' tag="span">我</router-link>
+   		<router-link to='/mysely' tag="span">我</router-link>
    	</footer>
 
   </div>
