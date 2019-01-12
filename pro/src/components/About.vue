@@ -1,6 +1,6 @@
 <template>
 	<!--<div id="">-->
-		<div class="hello">
+		<div class="benti">
 			<ul class="follUl otherUl">
 			<li class="follList otherList" v-for="n in 7">
 				<router-link to='/*' tag="div">
