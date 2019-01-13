@@ -35,7 +35,7 @@
 
 <script>
 	export default{
-		name:'Login',
+		name:'ResetPass',
 		data(){
 			return{
 				src:'',
@@ -73,14 +73,16 @@
 				}else{
 					this.Axios({
 						method: 'post',
-						url: '/user/loginByMessage.do',
+						url: '/user/forgetPassword.do',
 						params: {
-							phone: _this.phone,
-							code: _this.test
+							phone: _this.$route.query.phone,
+							code: _this.$route.query.code,
+							passwork:_this.pass
 						}
 					}).then(function(data) {
 						//var data=data.data
 						console.log(data)
+						_this.$router('/login')
 					})
 				}
 			}

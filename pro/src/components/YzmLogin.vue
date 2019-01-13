@@ -38,7 +38,7 @@
 
 <script>
 	export default{
-		name:'Login',
+		name:'YzmLogin',
 		data(){
 			return{
 				src:'',
@@ -87,6 +87,7 @@
 					}).then(function(data) {
 						//var data=data.data
 						console.log(data)
+						_this.$router.push('/')
 					})
 				}
 			}

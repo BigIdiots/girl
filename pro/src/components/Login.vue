@@ -8,8 +8,8 @@
 		
 		<section>
 			<div class="zhuti">
-				<mt-field label="手机号:" placeholder="请输入手机号" type="tel" v-model="phone"></mt-field>
-				<mt-field label="密　码:" placeholder="请输入密码" type="password" v-model="pass"></mt-field>
+				<mt-field label="手 机 号:" :state="phonejudge" placeholder="请输入手机号" @focus.native.capture="pmessage()" type="tel" :disableClear="true" v-model="phone"></mt-field>
+				<mt-field label="密　　码:" placeholder="请输入密码" type="password" @focus.native.capture="message()" :disableClear="true" v-model="pass"></mt-field>
 				<mt-button size="large" type="primary" @click="login()" style="font-size: 16px;">登　录</mt-button>
 				<router-link to="/register" style="width: 100%;">
 						<mt-button size="large" type="danger">注册新账号</mt-button>
@@ -44,7 +44,8 @@
 			return{
 				src:'',
 				phone:'',
-  				pass:''
+  				pass:'',
+  				instance:""
 			}
 		},
 		methods:{
@@ -55,10 +56,49 @@
 					url:'/user/login.do',
 					params:{phone:_this.phone,password:_this.pass}
 				}).then(function(data){
+					var code=data.data.code;
 					console.log(data)
+					if(code==0){
+						_this.$toast({
+						message: '该账号不存在',
+						position: 'middle',
+						duration: 2000
+					})
+					}else{
+						localStorage.setItem('phone',_this.user)
+						_this.$router.push('/')
+					}
+					
 				})
+			},
+			message() {
+				if(this.instance != "") {
+					this.instance.close();
+				}
+				this.instance = this.$toast('请输入您的密码');
+			},
+			pmessage() {
+				if(this.instance != "") {
+					this.instance.close();
+				}
+				this.instance = this.$toast('请输入您的手机号码')
+			},
+		},
+		computed: {
+		phonejudge() {
+			var _this = this;
+			var aa = ''
+			var reg = /^1(3|5|7|8)\d{9}$/g;
+			if(_this.phone == "") {
+				aa = ""
+			} else if(reg.test(_this.phone)) {
+				aa = "success";
+			} else {
+				aa = "error";
 			}
+			return aa
 		}
+	}
 	}
 </script>
 

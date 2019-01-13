@@ -8,6 +8,7 @@
 
 		<section>
 			<div class="zhuti">
+				<mt-field label="称　昵:" :state="userjudge" placeholder="请输入手机号" @focus.native.capture="umessage()" type="tel" :disableClear="true" v-model="user"></mt-field>
 				<mt-field label="手 机 号:" :state="phonejudge" placeholder="请输入手机号" @focus.native.capture="pmessage()" type="tel" :disableClear="true" v-model="phone"></mt-field>
 				<mt-field label="密　　码:" placeholder="请输入密码" type="password" @focus.native.capture="message()" :disableClear="true" :state="passjudge" v-model="pass"></mt-field>
 				<mt-field label="确认密码:" placeholder="请确认密码" type="password" @focus.native.capture="rmessage()" :disableClear="true" :state="repassjudge" v-model="repass"></mt-field>
@@ -30,9 +31,11 @@
 		data() {
 			return {
 				src: '',
+				ustate: 0,
 				pstate: 0,
 				state: 0,
 				restate: 0,
+				user:'',
 				phone: '',
 				pass: '',
 				repass: '',
@@ -65,6 +68,12 @@
 				}
 
 			},
+			umessage() {
+				if(this.instance != "") {
+					this.instance.close();
+				}
+				this.instance = this.$toast('请输入您的称昵，仅支持中英文、数字和下划线，且不能为纯数字');
+			},
 			message() {
 				if(this.instance != "") {
 					this.instance.close();
@@ -90,7 +99,7 @@
 			},
 			register() {
 				var _this = this;
-				if(this.judgement < 3) {
+				if(this.judgement < 4) {
 					console.log(_this.state)
 					_this.$toast({
 						message: '你的输入有误！！！',
@@ -119,15 +128,61 @@
 								}
 							}).then(function(data) {
 								console.log(data)
+								localStorage.setItem('name',_this.user)
 								_this.$router.push("/login")
 	
 							})
 						//}
 					})
 				}
+			},
+			getByteLen(val) {
+				var len = 0;
+				for(var i = 0; i < val.length; i++) {
+					var a = val.charAt(i);
+					if(a.match(/[^\x00-\xff]/ig) != null) {
+						len += 2;
+					} else {
+						len += 1;
+					}
+				}
+				return len;
 			}
 		},
 	computed: {
+		userjudge(){
+			var _this=this;
+			var aa=''
+			var reg = /\w*/g;
+			var reg1 = /[\u4e00-\u9fa5]*/g;
+			var reg3 = /^[0-9]{1,14}$/;
+			var val = this.user;
+			this.user = val.replace(/\s+/g, "");
+			var val = this.user;
+			if(this.user==''){
+				aa=''
+			}else if(reg.test(val) || reg1.test(val)) {
+				if(_this.getByteLen(val) <= 14) {
+					if(_this.getByteLen(val) == 0) {
+						aa = "warning";
+						this.ustate = 0
+					} else if(reg3.test(val)) {
+						aa = "error";
+						this.ustate = 0
+					} else {
+						aa = "success";
+						this.ustate = 1
+					}
+				} else {
+					aa = "error";
+					this.ustate = 0
+				}
+			} else {
+				aa = "error";
+				this.ustate = 0
+			}
+			return aa
+		},
 		phonejudge() {
 			var _this = this;
 			var aa = ''
@@ -177,7 +232,7 @@
 			return aa
 		},
 		judgement() {
-			return this.pstate + this.state + this.restate
+			return this.pstate + this.state + this.restate+this.ustate
 		}
 	}
 

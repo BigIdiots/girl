@@ -1,14 +1,14 @@
 <template>
 	<div class="hello">
-		<mt-header title="显示昵称" style="background: #F8F8F8;color: #101010;">
-			  <router-link to="/news" slot="left">
+		
+		<mt-header :title="users">
+			  <router-link to="/" slot="left">
 			   <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			  <router-link to="#" slot="right">
-			    <mt-button @click="" style="width: 70px;height: 30px;background: #fff;">分享</mt-button>
+			   <mt-button @click="backLogin()">退出登录</mt-button>
 			  </router-link>
 		</mt-header>
-		
 		
 		<section style="padding: 20px;">
 			<div class="mines">
@@ -52,10 +52,35 @@
 
 <script>
 	export default{
-		name:'Mine',
+		name:'Myself',
 		data(){
 			return{
-				src:"",
+				users:""
+			}
+		},
+		created () {
+            var a = localStorage.getItem('name')
+            if (a) {
+                // console.log(a)
+                this.users="欢迎您："+a
+//              localStorage.removeItem('phone')
+            }else{
+                this.$router.push("/login")
+            }
+        },
+		methods:{
+			back(){
+				this.$router.go(-1)
+			},
+			backLogin(){
+				this.$messagebox({
+				  title: '提示',
+				  message: '确定退出登录?',
+				  showCancelButton: true
+				}).then(()=>{
+					localStorage.clear()
+					this.$router.push("/")
+				})
 			}
 		}
 	}

@@ -24,8 +24,14 @@
   name: 'Search',
   data () {
     return {
-      src: ''
+      value: ''
     }
+  },
+  mounted(){
+  	
+  },
+  methods(){
+  	
   }
 }
 </script>

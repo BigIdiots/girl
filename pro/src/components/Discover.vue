@@ -4,14 +4,13 @@
 			<mt-tab-item id="1">推荐</mt-tab-item>
 			<mt-tab-item id="2">彩妆</mt-tab-item>
 			<mt-tab-item id="3">护肤</mt-tab-item>
-			<mt-tab-item id="4">视频</mt-tab-item>
 		</mt-navbar>
 
 		<section class="article">
 			<mt-tab-container v-model="active" :swipeable="true">
 				<mt-tab-container-item id="1">
 					<!--推荐-->
-					<ul class="follUl otherUl">
+					<ul class="follUl otherUl" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
 						<li class="follList otherList" v-for="item in list">
 							<router-link to='/*' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
@@ -74,28 +73,6 @@
 						</li>
 					</ul>
 				</mt-tab-container-item>
-
-				<mt-tab-container-item id="4">
-					<!--视频-->
-					<ul class="follUl otherUl">
-						<li class="follList otherList" v-for="n in 7">
-							<router-link to='/*' tag="div">
-								<img src="#" width="100%" height="200" />
-							</router-link>
-							<div class="info">
-								<p class="multiLine">秋季穿搭：提前准备好羽绒服是不是大多数妹子老师看到过爱设计费</p>
-								<div>
-									<img src="*" width="40" height="40" />
-									<div>
-										<router-link to='#' tag="span">
-											<mt-button type="default">点赞</mt-button>
-										</router-link>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</mt-tab-container-item>
 			</mt-tab-container>
 		</section>
 	</div>
@@ -103,11 +80,11 @@
 
 <script>
 	/*
-	 解决post请求方法（三种）：
-	 * 详见：
-	 * https://github.com/mzabriskie/axios/blob/master/README.md#using-applicationx-www-form-urlencoded-format.
-	 * */
-//	import axios from 'axios'//请求axios
+		 解决post请求方法（三种）：
+		 * 详见：
+		 * https://github.com/mzabriskie/axios/blob/master/README.md#using-applicationx-www-form-urlencoded-format.
+		 * */
+	//	import axios from 'axios'//请求axios
 	/*
 	 请求qs方法：
 	 * 只有当post请求就写，get请求不用
@@ -125,7 +102,7 @@
 	 * 就是通过'contentType'，
 	 * 当'contentType'为"application/x-www-form-urlencoded",它才会去读取请求体数据。
 	 * */
-//	import Qs from 'qs'
+	//	import Qs from 'qs'
 
 	export default {
 		name: 'Discover',
@@ -133,24 +110,52 @@
 			return {
 				src: '',
 				active: '1',
-				list:''
-			}  
-		},	
-		mounted() {
-			var _this = this;
-			/*数据转换*/
-			var data = this.Qs.stringify({
+				list: [],
 				limit: 12,
-				page: this.active,
-				style: this.active
-			});
-			this.Axios.post('/showSimpleZone.do', data).then((data) => {
-				var data=data.data.data;
+				val: "1"
+			}
+		},
+		watch: {
+			active: function(val, oldVal) {
+				// 这里就可以通过 val 的值变更来确定
+				this.val = val
+				/*数据转换*/
+				var _this = this
+				this.Axios.post('/showSimpleZone.do', _this.Qs.stringify({
+					limit: _this.limit,
+					page: _this.active,
+					style: _this.val
+				})).then((data) => {
+					var data = data.data.data;
+					console.log(data)
+					this.list = data;
+				})
+			},
+		},
+		mounted() {
+			console.log(this.val)
+			var _this = this
+			this.Axios.post('/showSimpleZone.do', _this.Qs.stringify({
+				limit: _this.limit,
+				page: _this.active,
+				style: _this.val
+			})).then((data) => {
+				var data = data.data.data;
 				console.log(data)
-				this.list=data
-				
+				this.list = data;
 			})
-//			axios.
+		},
+		methods: {
+			loadMore() {
+				this.loading = true;
+				setTimeout(() => {
+					let last = this.list[this.list.length - 1];
+					for(let i = 1; i <= 10; i++) {
+						this.list.push(last + i);
+					}
+					this.loading = false;
+				}, 2000);
+			}
 		}
 	}
 </script>

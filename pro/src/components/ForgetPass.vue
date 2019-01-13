@@ -38,7 +38,7 @@
 
 <script>
 	export default{
-		name:'Login',
+		name:'ForgetPass',
 		data(){
 			return{
 				src:'',
@@ -97,7 +97,13 @@
 					}).then(function(data) {
 						//var data=data.data
 						console.log(data)
-						_this.$router.push("/ResetPass")
+						_this.$router.push({
+							path:"/ResetPass",
+							query:{
+								phone: _this.phone,
+								code: _this.test
+							}
+						})
 					})
 				}
 			}
