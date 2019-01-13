@@ -1,6 +1,5 @@
 <template>
 	<div class="hello">
-		
 		<mt-header :title="users">
 			  <router-link to="/" slot="left">
 			   <mt-button icon="back" @click="back()">返回</mt-button>
@@ -30,7 +29,7 @@
 							<figcaption>获赞</figcaption>
 						</figure>
 					</div>
-					<button>个人资料</button>
+					<router-link to="/personData" tag="button">个人资料</router-link>
 				</div>
 			</div>
 			
@@ -82,7 +81,12 @@
 					this.$router.push("/")
 				})
 			}
-		}
+		},
+		 methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
 	}
 </script>
 

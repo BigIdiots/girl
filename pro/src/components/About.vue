@@ -3,7 +3,7 @@
 		<div class="benti">
 			<ul class="follUl otherUl">
 			<li class="follList otherList" v-for="n in 7">
-				<router-link to='/*' tag="div">
+				<router-link to='/details' tag="div">
 				<img src="#" width="100%" height="200"/>
 				</router-link>
 				<div class="info">

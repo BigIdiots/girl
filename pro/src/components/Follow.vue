@@ -2,7 +2,7 @@
 	<div class="benti">
 		<ul class="follUl">
 			<li class="follList special" v-for="n in 9">
-				<router-link to='/*' tag="div">
+				<router-link to='#' tag="div">
 				<img src="#" style="width: 100%;height: 230px;" />
 				</router-link>
 				<div class="info">
@@ -13,7 +13,7 @@
 							<router-link to='#' tag="span">
 								<mt-button type="danger">收藏</mt-button>
 							</router-link>
-							<router-link to='#' tag="span">
+							<router-link to='/review' tag="span">
 								<mt-button type="primary">评论</mt-button>
 							</router-link>
 							<router-link to='#' tag="span">

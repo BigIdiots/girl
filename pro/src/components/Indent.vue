@@ -14,7 +14,12 @@
 			<mt-tab-item id="5">已取消</mt-tab-item>
 		</mt-navbar>
 		
-		
+		<section class="article">
+			
+				
+				
+			
+		</section>
 		
 	</div>
 	
@@ -29,10 +34,14 @@
      	}
     
      },
-    
+     methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
      }
 </script>
 
 <style >
-
+	
 </style>

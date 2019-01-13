@@ -2,7 +2,7 @@
 	<!--我的草稿-->
 	<div id="">
 			<mt-header title="我的草稿" style="background: #F8F8F8;color: #101010;">
-				<router-link to="#" slot="left">
+				<router-link to="/" slot="left">
 					<mt-button icon="back" @click="back()">返回</mt-button>
 				</router-link>
 			</mt-header>
@@ -17,7 +17,6 @@
 			</article>
 		</section>
 
-		<footer></footer>
 	</div>
 </template>
 
@@ -28,7 +27,12 @@
 			return {
 				src: '',
 			}
-		}
+		},
+		 methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
 	}
 </script>
 
@@ -39,6 +43,7 @@
 		padding: 9px 7px;
 		background:#F8F8F8;
 		margin-top: 5px;
+		flex: 1;
 	}
 	
 	/*section article img {

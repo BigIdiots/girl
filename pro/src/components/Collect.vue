@@ -2,7 +2,7 @@
 	<!--我的收藏-->
 	<div id="shoucang" class="hello">
 		<header class="collHeader">
-			<router-link to="/" tag="em">
+			<router-link to="/" tag="span">
 				<mt-button icon="back" @click="back()">返回</mt-button>
 			</router-link>
 			<router-link to="/collectAll" tag="span">所有收藏</router-link>

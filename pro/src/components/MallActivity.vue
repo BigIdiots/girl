@@ -3,7 +3,7 @@
 	<!--<header>-->
 <mt-header title="活动">
   <router-link to="/mall" slot="left">
-    <mt-button icon="back" @click="back()">返回</mt-button>
+    <mt-button icon="back" @click="back">返回</mt-button>
   </router-link>
   <mt-button icon="more" slot="right"></mt-button>
 </mt-header>
@@ -17,7 +17,9 @@
 		<ul>
 			<li  v-for="n in 9">
 				<p>星期六</p>
-				<img src="../assets/logo.png" width="40px" height="40px"/>
+				<router-link to="/details" >
+					<img src="../assets/logo.png" width="40px" height="40px"/>
+				</router-link>
 				<span>GO</span>
 			</li>
 		</ul>
@@ -29,9 +31,11 @@
 		</div>
 		<ul>
 			<li  v-for="n in 9">
-				<p>星期六</p>
-				<img src="../assets/logo.png" width="40px" height="40px"/>
-				<span>GO</span>
+						<p>星期六</p>
+					<router-link to="/details" >
+						<img src="../assets/logo.png" width="40px" height="40px"/>
+					</router-link>
+						<span>GO</span>
 			</li>
 		</ul>
 	</div>

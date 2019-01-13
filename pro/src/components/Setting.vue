@@ -3,7 +3,7 @@
 	<div class="hello">
 		<mt-header title="设置" style="background: #F8F8F8;color: #101010;">
 			  <router-link to="/" slot="left">
-			    <mt-button @click="" style="width: 30px;height: 30px;background: #fff;">返回</mt-button>
+			    <mt-button @click="back()" style="width: 30px;height: 30px;background: #fff;">返回</mt-button>
 			  </router-link>
 		</mt-header>
 		
@@ -11,10 +11,11 @@
 			<div class="setting_a">
 				<mt-cell
 				  title="个人资料"
-				  to="#"
+				  to="/personData"
 				  is-link
 				  >
 				</mt-cell>
+				
 				<mt-cell
 				  title="账号与安全"
 				  to="#"
@@ -34,7 +35,12 @@
 			return{
 				src:'',
 			}
-		}
+		},
+		methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
 	}
 </script>
 

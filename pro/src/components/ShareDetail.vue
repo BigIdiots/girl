@@ -2,7 +2,8 @@
 	<div class="hello">
 		<mt-header title="查看分享">
 		  <router-link to="/" slot="left" style="font-size: 24px;">
-		  		&lt;
+		  	<!--	&lt;-->
+		  	<mt-button icon="back" @click="back()">返回</mt-button>
 		  </router-link>
 		</mt-header>
 		
@@ -20,10 +21,11 @@
 		</section>
 		
 		<footer>
-			<router-link to="#" tag="em" style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">店铺</router-link>
-   			<router-link to="/details" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">购物车</router-link>
+   			<router-link to="/shopCart" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">购物车</router-link>
    			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">加入购物车</router-link>
-   			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">立即购买</router-link>
+   			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">
+   				<mt-button @click="tishi" style="background: #F1F1F1;">立即购买</mt-button>
+   			</router-link>
 		</footer>
 	</div>
 </template>
@@ -35,6 +37,17 @@
 		    return {
 		      src: '',
 		    }
+		  },
+		  methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	},
+		  	tishi() {
+				this.$messagebox({
+					title: '提示',
+					message: '此功能正在构建中...'
+				});
+			}
 		  }
 		}
 </script>

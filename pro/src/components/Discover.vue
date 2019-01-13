@@ -12,7 +12,7 @@
 					<!--推荐-->
 					<ul class="follUl otherUl" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='/*' tag="div">
+							<router-link to='/details' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -34,7 +34,7 @@
 					<!--彩妆-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='/*' tag="div">
+							<router-link to='/details' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -56,7 +56,7 @@
 					<!--护肤-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='/*' tag="div">
+							<router-link to='/details' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -73,6 +73,10 @@
 						</li>
 					</ul>
 				</mt-tab-container-item>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 6eb07b65d294c7b2e4b128b92053a4d9ec293426
 			</mt-tab-container>
 		</section>
 	</div>
