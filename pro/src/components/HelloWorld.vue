@@ -77,7 +77,7 @@ header{
 	height: 40px;
 	background: #f1f1f1;
 	color: #a1a1a1;
-	font-size: 14px;
+	font-size: 18px;
 }
 header img{
 	position: absolute;

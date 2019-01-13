@@ -1,165 +1,326 @@
 <template>
 	<div class="hello">
-		<mt-header title="购物车" style="background: #F8F8F8;color: #101010;">
+		<mt-header title="购物车">
 			  <router-link to="#" slot="left">
 			    <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			</mt-header>
 		
 		<section class="delete">
-             <div class="slider">
-                   <div class="content" 
-                      @touchstart='touchStart'
-                      @touchmove='touchMove'
-                      @touchend='touchEnd'
-                      :style="deleteSlider"
-                   >
-                <!-- 插槽中放具体项目中需要内容         --> 
-                    <slot>
-                    	<div class="MallImg" slot="title">
-							<img slot="icon" src="../assets/logo.png" width="100" height="100" style="display: inline-block;">
-							<div class="MallList">
-								<div>
-									<p>淡夜茉莉版大宝</p>
-									<p class="multiLine">好评大宝 100ml 管装x2</p>
-								</div>
-								<div>
-									<div style="flex: 1;">
-										<p>￥55</p>
-										<mt-progress :value="45" :bar-height="10">
-											<span slot="end" style="color: #8C8C8C;">已抢45%</span>
-										</mt-progress>
-									</div>
-								</div>
-							</div>
-						</div>
-                    </slot>
-                   </div>
-                   <div class="remove" ref='remove'>
-                       		删除
-                   </div>
-            </div>
-        
+        <div class="container"  v-if="list.length">
+  <ul>
+    <li class="list-item " v-for="(item,index) in list " data-type="0">
+      <div class="list-box" @touchstart.capture="touchStart" @touchend.capture="touchEnd" @click="skip">
+        <img class="list-img" :src="item.imgUrl" width="100" height="100">
+        <div class="list-content">
+        	<div>
+        		<p class="title">{{item.title}}</p>
+          		<p class="tips">{{item.tips}}</p>
+        	</div>
+          	<div style="display: flex;justify-content: space-between;">
+				<p class="title" style="width: 100%;">￥{{item.pric}}</p>
+				<div class="cartBtn">
+					<button class="title" @click="jian(index)" :disabled="item.count==1">-</button>
+					<input class="txt title" type="text" :value="item.count" disabled>
+					<button class="title" @click="add(index)">+</button>
+				</div>
+			</div>
+        </div>
+      </div>
+      <div class="delete" @click="deleteItem" :data-index="index">删除</div>
+    </li>
+  </ul>
+  
+</div>
+ <div v-else>
+            购物车为空
+        </div>
      </section>
      
-     <footer>
+     <footer style="padding: 0 30px;">
      	<!--底部写结算-->
-     	<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">共计</router-link>
-     	<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">总价</router-link>
-     	<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">立即购买</router-link>
+     	<p style="font-size: 20px;font-weight: 700;">总价：¥{{totalPrice}}</p>
+     		<mt-button @click="tishi" type="primary">立即购买</mt-button>
      </footer>
 	</div>
 	
 </template>
-
 <script>
-	export default {
-		name:'ShopCart',
-     data() {
-     return {
-        startX:0,   //触摸位置
-        endX:0,     //结束位置
-        moveX: 0,   //滑动时的位置
-        disX: 0,    //移动距离
-        deleteSlider: '',//滑动时的效果,使用v-bind:style="deleteSlider"
-     }
-    
-     },
-     methods:{
-         touchStart(ev){
-                ev= ev || event
-          //tounches类数组，等于1时表示此时有只有一只手指在触摸屏幕
-    
-            if(ev.touches.length == 1){
-                    // 记录开始位置
-                    this.startX = ev.touches[0].clientX;
-                }
-            },
-         touchMove(ev){
-                ev = ev || event;
-                   //获取删除按钮的宽度，此宽度为滑块左滑的最大距离
-                let wd=this.$refs.remove.offsetWidth;
-                    if(ev.touches.length == 1) {
-                        // 滑动时距离浏览器左侧实时距离
-                        this.moveX = ev.touches[0].clientX
-                
-                        //起始位置减去 实时的滑动的距离，得到手指实时偏移距离
-                        this.disX = this.startX - this.moveX;
-                   console.log(this.disX)
-                        // 如果是向右滑动或者不滑动，不改变滑块的位置
-                        if(this.disX < 0 || this.disX == 0) {
-                            this.deleteSlider = "transform:translateX(0px)";
-                        // 大于0，表示左滑了，此时滑块开始滑动 
-                        }else if (this.disX > 0) {
-                             //具体滑动距离我取的是 手指偏移距离*5。
-                            this.deleteSlider = "transform:translateX(-" + this.disX*5 + "px)";
-                            
-                            // 最大也只能等于删除按钮宽度 
-                            if (this.disX*5 >=wd) {
-                                this.deleteSlider = "transform:translateX(-" +wd+ "px)";
-                             
-                            }
-                        }
-                    }
-              },
-         touchEnd(ev){
-              ev = ev || event;
-              let wd=this.$refs.remove.offsetWidth;
-              if (ev.changedTouches.length == 1) {
-                    let endX = ev.changedTouches[0].clientX;
-                      
-                        this.disX = this.startX - endX;
-                        console.log(this.disX)
-                        //如果距离小于删除按钮一半,强行回到起点
-                        
-                        if ((this.disX*5) < (wd/2)) {
-                          
-                            this.deleteSlider = "transform:translateX(0px)";
-                        }else{
-                            //大于一半 滑动到最大值
-                             this.deleteSlider = "transform:translateX(-"+wd+ "px)";
-                        }
-                    }
-                }      
-     }
-     }
+	export default{
+ name: 'ShopCart',
+ data () {
+ return {
+ 	list1:[],
+  list : [
+  {
+   title : 'Chrome更新了' ,
+   imgUrl : './static/images/Chrome.png' ,
+   tips : '不再支持Flash视频播放' ,
+   time : '上午 8:30',
+   count:2,
+   pric:255
+  },
+  {
+   title : '电影新资讯' ,
+   imgUrl : './static/images/Sina.png' ,
+   tips : '电影《红海行动》上映以来票房暴涨，很多国人表示对国产电影有了新的改观' ,
+   count:4,
+   time : '上午 12:00',
+   pric:55
+  },
+        {
+   title : '聚焦两会·共筑中国梦' ,
+   imgUrl : './static/images/video.png' ,
+   tips : '习近平代表的两会故事' ,
+   time : '下午 17:45',
+   count:5,
+   pric:25
+        },
+        {
+   title : '微信团队' ,
+   imgUrl : './static/images/Wechat.png' ,
+   tips : '您的帐号有异常登录，如非本人操作，请及时修改密码' ,
+   time : '昨天',
+   count:1,
+   pric:515
+   
+        }
+  ],
+  startX : 0 ,
+  endX : 0 ,
+ }
+ },
+ methods : {
+ 	tishi(){
+ 		this.$messagebox({
+  title: '提示',
+  message: '暂不支持此功能'
+});
+ 	},
+ 	back(){
+ 		this.$router.go(-1)
+ 	},
+ //跳转
+ skip(){
+  if( this.checkSlide() ){
+  this.restSlide();
+      }else{
+//alert('You click the slide!')
+      }
+ },
+ //滑动开始
+ touchStart(e){
+   // 记录初始位置
+  this.startX = e.touches[0].clientX;
+ },
+ //滑动结束
+ touchEnd(e){
+            // 当前滑动的父级元素
+  let parentElement = e.currentTarget.parentElement;
+  // 记录结束位置
+  this.endX = e.changedTouches[0].clientX;
+            // 左滑
+  if( parentElement.dataset.type == 0 && this.startX - this.endX > 30 ){
+  this.restSlide();
+  parentElement.dataset.type = 1;
+  }
+            // 右滑
+  if( parentElement.dataset.type == 1 && this.startX - this.endX < -30 ){
+  this.restSlide();
+  parentElement.dataset.type = 0;
+  }
+  this.startX = 0;
+  this.endX = 0;
+ },
+    //判断当前是否有滑块处于滑动状态
+    checkSlide(){
+  let listItems = document.querySelectorAll('.list-item');
+  for( let i = 0 ; i < listItems.length ; i++){
+  if( listItems[i].dataset.type == 1 ) {
+   return true;
+        }
+  }
+  return false;
+    },
+ //复位滑动状态
+ restSlide(){
+  let listItems = document.querySelectorAll('.list-item');
+             // 复位
+  for( let i = 0 ; i < listItems.length ; i++){
+  listItems[i].dataset.type = 0;
+  }
+ },
+ //删除
+ deleteItem(e){
+   // 当前索引
+  let index = e.currentTarget.dataset.index;
+  // 复位
+  this.restSlide();
+  // 删除
+  this.list.splice(index,1);
+ },
+ add(index){
+ 	// 当前索引
+//let index = e.currentTarget.dataset.index;
+	this.list[index].count++;
+	if(this.list[index].count>=99){
+		this.list[index].count=99
+	}
+},
+jian(index){
+	this.list[index].count--;
+	if(this.list[index].count<=1){
+		this.list[index].count=1
+	}
+}
+ },
+ computed: {
+        totalPrice: function() {
+            var total = 0;
+            for(var i = 0, len = this.list.length; i < len; i++) {
+                total += this.list[i].pric * this.list[i].count;
+            }
+            //每隔三位加一个逗号
+            return total.toString().replace(/\B(?=(\d{3})+$)/g, ',');
+        }
+    }
+}
 </script>
 
-<style scoped >
-.delete{
-        margin-top:10px ;
-        height: 20%;
+<style>
+        div.cartBtn{
+        	display: flex;
+        }
+    div.cartBtn>button {
+	width: 25px;
+	height: 25px;
+	background: #cecece;
+	line-height: 25px;
+	text-align: center;
+	border: none;
+	outline: none;
 }
-.slider{
-        width: 100%;
-        height:140px;
-        position: relative;
 
-         user-select: none;
-         }
-         
-.slider .content{
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background:#F8F8F8;
-            z-index: 100;
-            /*//    设置过渡动画*/
-            transition: 0.3s;
-        }
-.slider  .remove{
-            position: absolute;
-            width:80px;
-            height:80px;
-            background:red;
-            right: 0;
-            top: 0;
-            color:#fff;
-            text-align: center;
-            font-size: 20px;
-            line-height: 80px;
-        }
-    
+div.cartBtn .txt {
+	width: 40px;
+	height: 20px;
+	text-align: center;
+	outline: none;
+}
+.page-title{
+  text-align: center;
+  font-size: 17px;
+  padding: 10px 15px;
+  position: relative;
+}
+.page-title:after{
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #ccc;
+  color: #ccc;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+.list-item{
+  position: relative;
+  height: 130px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.list-item[data-type="0"]{
+  transform: translate3d(0,0,0);
+  overflow: hidden;
+}
+.list-item[data-type="1"]{
+  transform: translate3d(-200px,0,0);
+}
+.list-item:after{
+  content: " ";
+  position: absolute;
+  left: 20px;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  border-bottom: 1px solid #ccc;
+  color: #ccc;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  z-index: 2;
+}
+.list-box{
+  padding: 10px 20px ;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+}
+.list-item .list-img{
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+.list-item .list-content{
+  padding: 10px 0 10px 20px;
+  height: 100px;
+  display: flex;
+  position: relative;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.list-item .list-content>div{
+	width: 100%;
+}
+.list-item .title{
+  display: block;
+  color: #333;
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-item .tips{
+  display: block;
+  overflow: hidden;
+  font-size: 12px;
+  color: #999;
+  line-height: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.list-item .delete{
+  width: 200px;
+  height: 130px;
+  background: #ff4949;
+  font-size: 17px;
+  color: #fff;
+  text-align: center;
+  line-height: 130px;
+  position: absolute;
+  top:0;
+  right: -200px;
+}
+.cartfoot {
+	padding: 0 30px;
+}
 </style>
