@@ -13,7 +13,7 @@
 					<!--推荐-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='/*' tag="div">
+							<router-link to='#' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -35,7 +35,7 @@
 					<!--彩妆-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='/*' tag="div">
+							<router-link to='#' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -57,7 +57,7 @@
 					<!--护肤-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='/*' tag="div">
+							<router-link to='#' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -79,7 +79,7 @@
 					<!--视频-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="n in 7">
-							<router-link to='/*' tag="div">
+							<router-link to='#' tag="div">
 								<img src="#" width="100%" height="200" />
 							</router-link>
 							<div class="info">

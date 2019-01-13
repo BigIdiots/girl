@@ -1,7 +1,7 @@
 <template>
 	<div class="hello">
 		<mt-header title="商品详情">
-		  <router-link to="/" slot="left" style="font-size: 24px;">
+		  <router-link to="/" slot="left" style="font-size: 24px;" @click="back()">
 		  		&lt;
 		  </router-link>
 		</mt-header>
