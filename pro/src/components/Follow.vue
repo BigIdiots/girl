@@ -13,7 +13,7 @@
 							<router-link to='#' tag="span">
 								<mt-button type="danger">收藏</mt-button>
 							</router-link>
-							<router-link to='#' tag="span">
+							<router-link to='/review' tag="span">
 								<mt-button type="primary">评论</mt-button>
 							</router-link>
 							<router-link to='#' tag="span">

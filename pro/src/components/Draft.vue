@@ -17,7 +17,6 @@
 			</article>
 		</section>
 
-		<footer></footer>
 	</div>
 </template>
 
@@ -44,6 +43,7 @@
 		padding: 9px 7px;
 		background:#F8F8F8;
 		margin-top: 5px;
+		flex: 1;
 	}
 	
 	/*section article img {

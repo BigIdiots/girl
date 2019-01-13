@@ -17,7 +17,9 @@
 		<ul>
 			<li  v-for="n in 9">
 				<p>星期六</p>
-				<img src="../assets/logo.png" width="40px" height="40px"/>
+				<router-link to="/details" >
+					<img src="../assets/logo.png" width="40px" height="40px"/>
+				</router-link>
 				<span>GO</span>
 			</li>
 		</ul>
@@ -29,9 +31,11 @@
 		</div>
 		<ul>
 			<li  v-for="n in 9">
-				<p>星期六</p>
-				<img src="../assets/logo.png" width="40px" height="40px"/>
-				<span>GO</span>
+						<p>星期六</p>
+					<router-link to="/details" >
+						<img src="../assets/logo.png" width="40px" height="40px"/>
+					</router-link>
+						<span>GO</span>
 			</li>
 		</ul>
 	</div>

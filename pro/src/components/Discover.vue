@@ -4,7 +4,6 @@
 			<mt-tab-item id="1">推荐</mt-tab-item>
 			<mt-tab-item id="2">彩妆</mt-tab-item>
 			<mt-tab-item id="3">护肤</mt-tab-item>
-			<mt-tab-item id="4">视频</mt-tab-item>
 		</mt-navbar>
 
 		<section class="article">
@@ -13,7 +12,7 @@
 					<!--推荐-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='#' tag="div">
+							<router-link to='/details' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -35,7 +34,7 @@
 					<!--彩妆-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='#' tag="div">
+							<router-link to='/details' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -57,7 +56,7 @@
 					<!--护肤-->
 					<ul class="follUl otherUl">
 						<li class="follList otherList" v-for="item in list">
-							<router-link to='#' tag="div">
+							<router-link to='/details' tag="div">
 								<img :src="item.imgPath" width="100%" height="200" />
 							</router-link>
 							<div class="info">
@@ -75,27 +74,6 @@
 					</ul>
 				</mt-tab-container-item>
 
-				<mt-tab-container-item id="4">
-					<!--视频-->
-					<ul class="follUl otherUl">
-						<li class="follList otherList" v-for="n in 7">
-							<router-link to='#' tag="div">
-								<img src="#" width="100%" height="200" />
-							</router-link>
-							<div class="info">
-								<p class="multiLine">秋季穿搭：提前准备好羽绒服是不是大多数妹子老师看到过爱设计费</p>
-								<div>
-									<img src="*" width="40" height="40" />
-									<div>
-										<router-link to='#' tag="span">
-											<mt-button type="default">点赞</mt-button>
-										</router-link>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</mt-tab-container-item>
 			</mt-tab-container>
 		</section>
 	</div>

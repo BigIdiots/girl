@@ -1,8 +1,7 @@
 <template>
 	<div class="hello">
 		<mt-header title="商品详情">
-		  <router-link to="/" slot="left" style="font-size: 24px;" >
-		  		<!--&lt;-->
+		  <router-link to="#" slot="left" style="font-size: 24px;" >
 		  		<mt-button icon="back" @click="back()">返回</mt-button>
 		  </router-link>
 		</mt-header>
@@ -26,16 +25,17 @@
 					面唇釉相比，他的黏稠度变小了。
 				</p>
 			</div>
-				<router-link to="#" class="kefu" tag="div">
-					客服
+				<router-link to="#"  tag="div">
+					<mt-button @click="tishi" class="kefu">客服</mt-button>
 				</router-link>	
 		</section>
 		
 		<footer>
-			<router-link to="#" tag="em" style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">店铺</router-link>
-   			<router-link to="/ShareDetail" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">购物车</router-link>
+   			<router-link to="/shopCart" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">购物车</router-link>
    			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">加入购物车</router-link>
-   			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">立即购买</router-link>
+   			<router-link to="#" tag='em' style="font-size: 14px;border-right: 1px solid #8C8C8C;padding: 0 20px;">
+   				<mt-button @click="tishi" style="background: #F1F1F1;">立即购买</mt-button>
+   			</router-link>
 		</footer>
 	</div>
 </template>
@@ -51,7 +51,13 @@
 		  methods:{
 		  	back(){
 		  		this.$router.go(-1);
-		  	}
+		  	},
+		  	tishi() {
+				this.$messagebox({
+					title: '提示',
+					message: '暂不支持此功能'
+				});
+			}
 		  }
 		}
 </script>
@@ -96,8 +102,8 @@
 	.kefu{
 		width: 50px;
 		height: 50px;
-		background: #CCCCCC;
-		font-size: 14px;
+		/*background: #CCCCCC;*/
+		font-size: 12px;
 		line-height: 44px;
 		text-align: center;
 		border-radius: 50%;

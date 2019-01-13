@@ -11,7 +11,7 @@
   			<mt-cell title="PIN券" to="#"  value="" class="hellos"></mt-cell>
   			<mt-cell title="心愿单" to="#"  value="" class="hellos"></mt-cell>
   			<mt-cell title="pin会员卡" to="#"  value="" class="hellos"></mt-cell>
-  			<mt-cell title="客服中心" to="/service"  value="" class="hellos"></mt-cell>
+  			<mt-cell title="客服中心" to="#"  value="" class="hellos"></mt-cell>
   			<mt-cell title="设置" to="/setting"  value="" class="hellos"></mt-cell>
   		</div>
   	</div>

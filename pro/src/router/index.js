@@ -38,6 +38,7 @@ import Indent from '@/components/Indent'//订单
 import ShopCart from '@/components/ShopCart'//购物车
 import Payment from '@/components/Payment'//订单支付
 import PersonData from '@/components/PersonData'//个人资料
+import Review from '@/components/Review'
 Vue.use(Router)
 
 export default new Router({
@@ -190,16 +191,20 @@ export default new Router({
 				component:Indent
 			},
 			{
-				path:'/shopcart',
+				path:'/shopcart',//购物车
 				component:ShopCart
 			},
 			{
-				path:'/payment',
+				path:'/payment',//订单支付
 				component:Payment
 			},
 			{
-				path:'/personData',
+				path:'/personData',//个人资料
 				component:PersonData
+			},
+			{
+				path:'/review',//评论
+				component:Review
 			}
   ]
 })

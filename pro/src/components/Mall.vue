@@ -91,10 +91,12 @@
 						
 						<ul class="mallList">
 							<li v-for="n in 9">
-								<img src="" width="100%" height="150">
-								<p>滋润丰盈肌肤神器</p>
-								<p>兰蔻精华修复肌底液</p>
-								<p>￥200</p>
+								<router-link to="/details" >
+									<img src="" width="100%" height="150">
+								</router-link >
+									<p>滋润丰盈肌肤神器</p>
+									<p>兰蔻精华修复肌底液</p>
+									<p>￥200</p>
 							</li>
 						</ul>
 					</aside>
@@ -104,10 +106,12 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li v-for="n in 9">
-								<img src="" width="100%" height="150">
-								<p>滋润丰盈肌肤神器</p>
-								<p>兰蔻精华修复肌底液</p>
-								<p>￥200</p>
+								<router-link to="/details" >
+									<img src="" width="100%" height="150">
+								</router-link >
+									<p>滋润丰盈肌肤神器</p>
+									<p>兰蔻精华修复肌底液</p>
+									<p>￥200</p>
 							</li>
 						</ul>
 					</aside>
@@ -117,10 +121,12 @@
 					<aside class="aside">
 						<ul class="mallList">
 							<li v-for="n in 9">
-								<img src="" width="100%" height="150">
-								<p>滋润丰盈肌肤神器</p>
-								<p>兰蔻精华修复肌底液</p>
-								<p>￥200</p>
+								<router-link to="/details" >
+									<img src="" width="100%" height="150">
+								</router-link >
+									<p>滋润丰盈肌肤神器</p>
+									<p>兰蔻精华修复肌底液</p>
+									<p>￥200</p>
 							</li>
 						</ul>
 					</aside>

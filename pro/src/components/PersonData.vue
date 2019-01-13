@@ -12,9 +12,6 @@
 			<mt-cell >
 					<div class="yonghu" slot="title" style="height: 68px;line-height: 68px;">
 					 	<img slot="icon" src="../../build/logo.png" width="40" height="40" style="display: inline-block;border-radius: 50%;margin-top: 15px;">
-						<div>
-							<p>修改头像</p>
-						</div>							 	
 					</div>
 				</mt-cell>
 			<mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
