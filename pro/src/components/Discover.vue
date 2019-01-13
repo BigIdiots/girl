@@ -73,10 +73,7 @@
 						</li>
 					</ul>
 				</mt-tab-container-item>
-<<<<<<< HEAD
-=======
 
->>>>>>> 6eb07b65d294c7b2e4b128b92053a4d9ec293426
 			</mt-tab-container>
 		</section>
 	</div>
