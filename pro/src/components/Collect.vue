@@ -10,7 +10,7 @@
 		</header>
 
 		<section>
-			<router-view @toparent="getdata"></router-view>
+			<router-view></router-view>
 		</section>
 
 		<footer>

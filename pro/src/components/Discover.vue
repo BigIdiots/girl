@@ -134,7 +134,6 @@
 			},
 		},
 		mounted() {
-			console.log(this.val)
 			var _this = this
 			this.Axios.post('/showSimpleZone.do', _this.Qs.stringify({
 				limit: _this.limit,
@@ -142,7 +141,6 @@
 				style: _this.val
 			})).then((data) => {
 				var data = data.data.data;
-				console.log(data)
 				this.list = data;
 			})
 		},

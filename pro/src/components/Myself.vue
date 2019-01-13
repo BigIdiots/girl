@@ -72,13 +72,10 @@
 				this.$router.go(-1)
 			},
 			backLogin(){
-				this.$messagebox({
-				  title: '提示',
-				  message: '确定退出登录?',
-				  showCancelButton: true
-				}).then(()=>{
+				this.$messagebox('确定退出登录?')
+				.then(()=>{
 					localStorage.clear()
-					this.$router.push("/")
+					_this.$router.push("/")
 				})
 			}
 		},

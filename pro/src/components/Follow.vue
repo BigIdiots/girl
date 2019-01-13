@@ -1,7 +1,7 @@
 <template>
 	<div class="benti">
-		<ul class="follUl">
-			<li class="follList special" v-for="n in 9">
+		<ul class="follUl" v-infinite-scroll="loadMore" infinite-scroll-disabled="loading" infinite-scroll-distance="10">
+			<li class="follList special" v-for="item in list">
 				<router-link to='#' tag="div">
 				<img src="#" style="width: 100%;height: 230px;" />
 				</router-link>
@@ -10,14 +10,14 @@
 					<div>
 						<img src="*" width="44" height="44" />
 						<div>
-							<router-link to='#' tag="span">
+							<router-link to='/collect' tag="span">
 								<mt-button type="danger">收藏</mt-button>
 							</router-link>
 							<router-link to='/review' tag="span">
 								<mt-button type="primary">评论</mt-button>
 							</router-link>
 							<router-link to='#' tag="span">
-								<mt-button type="default">点赞</mt-button>
+								<mt-button @click="dianzhan()" type="default">点赞</mt-button>
 							</router-link>
 						</div>
 					</div>
@@ -32,7 +32,34 @@
 		name: 'Follow',
 		data() {
 			return {
-				src: ''
+				list:[]
+			}
+		},
+		methods:{
+			dianzhan(){
+				var _this=this;
+				var a = localStorage.getItem('id')
+				if(a){
+					this.$messagebox({
+						title: '提示',
+						message: '暂不支持此功能'
+					});
+				}else{
+					this.$messagebox.confirm('您还未登录，请登录',)
+					.then(()=>{
+						_this.$router.push("/login")
+					})
+				}
+			},
+			loadMore() {
+				this.loading = true;
+				setTimeout(() => {
+					let last = this.list[this.list.length - 1];
+					for(let i = 1; i <= 10; i++) {
+						this.list.push(last + i);
+					}
+					this.loading = false;
+				}, 2000);
 			}
 		}
 	}

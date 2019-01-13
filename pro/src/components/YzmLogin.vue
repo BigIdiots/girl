@@ -25,14 +25,6 @@
 			</div>
 		</section>
 		
-		<footer style="height: 150px;background: #FFFFFF;">
-			<div class="rests">
-				<h4>第三方登录</h4>
-				<router-link to="/weixin" tag="em">微信</router-link>
-				<router-link to="/tengxun" tag="em">QQ</router-link>
-				<router-link to="/weibo" tag="em">微博</router-link>
-			</div>
-		</footer>
 	</div>
 </template>
 

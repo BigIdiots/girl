@@ -18,7 +18,7 @@
  <header>
  	<img class="head" :src="src" v-on:click="toggle()">
  	<router-link to="/follow" tag="span">关注</router-link>
-	<router-link to="/discover" tag='span'>发现</router-link>
+	<router-link to="/discover" @click="dianji()" tag='span'>发现</router-link>
 	<router-link to="/about" tag='span'>附近</router-link>
  </header>
 
@@ -33,9 +33,8 @@
    		<router-view ></router-view>
    	</section>
    	<footer>
-   		<router-link to="/" tag="span">首页</router-link>
+   		<router-link to="/" tag="span" class="hover">首页</router-link>
    		<router-link to="/mall" tag='span'>商城</router-link>
-   		<router-link to="/login" tag='span'>+</router-link>
    		<router-link to="/news" tag='span'>消息</router-link>
    		<router-link to='/myself' tag="span">我</router-link>
    	</footer>
@@ -50,15 +49,16 @@ export default {
     return {
       src: '',
       isShow:false,
+      ishas:false
     }
   },
   methods:{
   	 toggle:function(){
              this.isShow = !this.isShow;
           },
-	 show1:function(){
+	 		show1:function(){
 	 	
-	 }
+	 	},
   }
 }
 </script>
@@ -101,7 +101,7 @@ header>span{
 header:hover>span:first-of-type{
 	color: #8c8c8c;
 }
-header:hover>span:hover,header>span:first-of-type{
+.hover,header:hover>span:hover,header>span:first-of-type{
 	color: black;
 }
 .mint-searchbar input{
@@ -130,16 +130,8 @@ footer span{
 footer span:hover{
 	color: black;
 }
-footer span:nth-child(3){
-	border-radius: 50%;
-	font-size: 40px;
-	font-weight: 900;
-	color: black;
-}
-
 
 .hello .navs{
-	/*display: none;*/
 	width: 100%;
 	height: 100%;
 	z-index: 999;
