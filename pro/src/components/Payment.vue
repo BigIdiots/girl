@@ -2,7 +2,7 @@
 	<!--支付面板-->
 	<div class="hello">
 		<mt-header title="订单支付" style="background: #F8F8F8;color: #101010;">
-			  <router-link to="#" slot="left">
+			  <router-link to="/" slot="left">
 			    <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			</mt-header>

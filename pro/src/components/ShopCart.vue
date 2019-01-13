@@ -1,7 +1,7 @@
 <template>
 	<div class="hello">
 		<mt-header title="购物车">
-			  <router-link to="#" slot="left">
+			  <router-link to="/" slot="left">
 			    <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			</mt-header>
