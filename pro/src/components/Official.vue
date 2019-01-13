@@ -38,7 +38,12 @@
 			return{
 				src:''
 			}
-		}
+		},
+		 methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
 	}
 </script>
 

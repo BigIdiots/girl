@@ -2,7 +2,8 @@
 	<div class="hello">
 		<mt-header title="查看分享">
 		  <router-link to="/" slot="left" style="font-size: 24px;">
-		  		&lt;
+		  	<!--	&lt;-->
+		  	<mt-button icon="back" @click="back()">返回</mt-button>
 		  </router-link>
 		</mt-header>
 		
@@ -35,6 +36,11 @@
 		    return {
 		      src: '',
 		    }
+		  },
+		  methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
 		  }
 		}
 </script>

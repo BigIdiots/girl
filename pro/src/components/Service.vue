@@ -80,7 +80,12 @@
 	  methods:{
 	  	 toggle: function(index){
                    this.lists.forEach((list, i) => list.show = i == index)
-                }
+               },
+           
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  
 	  }
 	}
 </script>

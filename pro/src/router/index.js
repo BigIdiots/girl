@@ -37,6 +37,7 @@ import Myself from '@/components/Myself'//我的资料
 import Indent from '@/components/Indent'//订单
 import ShopCart from '@/components/ShopCart'//购物车
 import Payment from '@/components/Payment'//订单支付
+import PersonData from '@/components/PersonData'//个人资料
 Vue.use(Router)
 
 export default new Router({
@@ -195,6 +196,10 @@ export default new Router({
 			{
 				path:'/payment',
 				component:Payment
+			},
+			{
+				path:'/personData',
+				component:PersonData
 			}
   ]
 })

@@ -3,7 +3,7 @@
 	<!--<header>-->
 <mt-header title="活动">
   <router-link to="/mall" slot="left">
-    <mt-button icon="back" @click="back()">返回</mt-button>
+    <mt-button icon="back" @click="back">返回</mt-button>
   </router-link>
   <mt-button icon="more" slot="right"></mt-button>
 </mt-header>

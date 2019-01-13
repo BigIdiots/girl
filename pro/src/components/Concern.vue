@@ -169,7 +169,12 @@ Random.extend({
 					var data = data.data.users;
 					_this.list=data
 				})
-		}
+		},
+		methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
 	}
 </script>
 

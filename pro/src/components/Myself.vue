@@ -1,7 +1,7 @@
 <template>
 	<div class="hello">
 		<mt-header title="显示昵称" style="background: #F8F8F8;color: #101010;">
-			  <router-link to="/news" slot="left">
+			  <router-link to="/" slot="left">
 			   <mt-button icon="back" @click="back()">返回</mt-button>
 			  </router-link>
 			  <router-link to="#" slot="right">
@@ -30,7 +30,7 @@
 							<figcaption>获赞</figcaption>
 						</figure>
 					</div>
-					<button>个人资料</button>
+					<router-link to="/personData" tag="button">个人资料</router-link>
 				</div>
 			</div>
 			
@@ -57,7 +57,12 @@
 			return{
 				src:"",
 			}
-		}
+		},
+		 methods:{
+		  	back(){
+		  		this.$router.go(-1);
+		  	}
+		  }
 	}
 </script>
 
