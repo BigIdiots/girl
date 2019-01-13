@@ -4,7 +4,8 @@ Vue.use(Vuex);
 
 var state={
 	name:'',
-	phone:''
+	phone:'',
+	id:''
 }
 //
 //var getters={

@@ -73,10 +73,6 @@
 						</li>
 					</ul>
 				</mt-tab-container-item>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6eb07b65d294c7b2e4b128b92053a4d9ec293426
 			</mt-tab-container>
 		</section>
 	</div>
@@ -137,7 +133,6 @@
 			},
 		},
 		mounted() {
-			console.log(this.val)
 			var _this = this
 			this.Axios.post('/showSimpleZone.do', _this.Qs.stringify({
 				limit: _this.limit,
@@ -145,7 +140,6 @@
 				style: _this.val
 			})).then((data) => {
 				var data = data.data.data;
-				console.log(data)
 				this.list = data;
 			})
 		},

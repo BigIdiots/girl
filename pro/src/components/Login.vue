@@ -26,14 +26,6 @@
 			</div>
 		</section>
 		
-		<footer style="height: 150px;background: #FFFFFF;">
-			<div class="rests">
-				<h4>第三方登录</h4>
-				<router-link to="/weixin" tag="em">微信</router-link>
-				<router-link to="/tengxun" tag="em">QQ</router-link>
-				<router-link to="/weibo" tag="em">微博</router-link>
-			</div>
-		</footer>
 	</div>
 </template>
 
@@ -66,6 +58,7 @@
 					})
 					}else{
 						localStorage.setItem('phone',_this.user)
+						localStorage.setItem('id',_this.user)
 						_this.$router.push('/')
 					}
 					
@@ -103,23 +96,6 @@
 </script>
 
 <style>
-	 .rests{
-	 	width: 100%;
-	 }
-	 .rests h4{
-	 	font-weight: normal;
-	 	color: #656b79;
-	 	font-size: 14px;
-	 }
-	 .rests em{
-	 	font-style: normal;
-	 	font-size: 14px;
-		background: #E8E8E8;
-		padding: 10px 20px;
-		line-height: 30px;
-		text-align: center;
-		margin-left: 20px;
-	 }
 	 section .zhuti .zhutis{
 	 	width: 100%;
 	 	display: flex;

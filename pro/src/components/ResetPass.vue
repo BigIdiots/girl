@@ -11,25 +11,9 @@
 				<mt-field label="重置密码:" placeholder="请输入新密码" type="password" @focus.native.capture="message()" :disableClear="true" :state="passjudge" v-model="pass"></mt-field>
 				<mt-field label="确认密码:" placeholder="再次输入密码" type="password" @focus.native.capture="rmessage()" :disableClear="true" :state="repassjudge" v-model="repass"></mt-field>
 				<mt-button size="large" type="primary" @click="login()" style="font-size: 16px;">确　认</mt-button>
-				<!--<div class="zhutis">
-					<router-link to="#" tag="div" style="color: #656b79;font-size: 14px;">
-						<mt-button plain>忘记密码</mt-button>
-					</router-link>
-					<router-link to="/login" tag="div" style="color: #656b79;font-size: 14px;">
-						<mt-button plain>密码登录</mt-button>
-					</router-link>
-				</div>-->
 			</div>
 		</section>
 		
-		<footer style="height: 150px;background: #FFFFFF;">
-			<div class="rests">
-				<h4>第三方登录</h4>
-				<router-link to="/weixin" tag="em">微信</router-link>
-				<router-link to="/tengxun" tag="em">QQ</router-link>
-				<router-link to="/weibo" tag="em">微博</router-link>
-			</div>
-		</footer>
 	</div>
 </template>
 
