@@ -6,6 +6,7 @@
 		<router-link to="/discover" tag='span'>发现</router-link>
 		<router-link to="/about" tag='span'>附近</router-link>
 	</header>
+	<section>
 	<mt-search v-model="value" :autofocus="true" placeholder="大家都在搜“玩转春节”">
 		<mt-cell class="Mall" v-for="item in list" :title="item.uName" :value="item.value">
 						<div class="MallImg" slot="title">
@@ -27,7 +28,7 @@
 						</div>
 		</mt-cell>
 	</mt-search>
-
+</section>
 </div>
 </template>
 
@@ -68,7 +69,4 @@
 	
 
 <style>
-	.mint-search-list {
-		margin-top: 100px;
-	}
 </style>

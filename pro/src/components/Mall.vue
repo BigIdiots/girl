@@ -17,7 +17,7 @@
 		</div>
 
 		<header>
-			<img :src="src" v-on:click="toggle()">
+			<img src="#" v-on:click="toggle()">
 			<div class="mint-searchbar">
 				<router-link to="/search" class="mint-searchbar-inner" style="background: #fff;">
 					<i class="mintui mintui-search"></i>
@@ -166,7 +166,7 @@
 				}, 2000);
 			}
 		},
-		mounted(){
+		mounted() {
 			console.log(this.val)
 			var _this = this
 			this.Axios.post('/showSimpleZone.do', _this.Qs.stringify({

@@ -16,11 +16,11 @@
 		</div>
 		<ul>
 			<li  v-for="n in 9">
-				<p>星期六</p>
 				<router-link to="/details" >
+				<p>星期六</p>
 					<img src="../assets/logo.png" width="40px" height="40px"/>
-				</router-link>
 				<span>GO</span>
+				</router-link>
 			</li>
 		</ul>
 	</div>
@@ -31,11 +31,11 @@
 		</div>
 		<ul>
 			<li  v-for="n in 9">
-						<p>星期六</p>
 					<router-link to="/details" >
+						<p>星期六</p>
 						<img src="../assets/logo.png" width="40px" height="40px"/>
-					</router-link>
 						<span>GO</span>
+					</router-link>
 			</li>
 		</ul>
 	</div>
